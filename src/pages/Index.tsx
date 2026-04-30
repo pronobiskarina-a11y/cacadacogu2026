@@ -1,9 +1,9 @@
-import { Calendar, Clock, MapPin, Leaf, Sparkles, ArrowRight, Footprints, Search, Utensils, TreePine } from "lucide-react";
+import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroForest from "@/assets/hero-forest.jpg";
 import foraging from "@/assets/foraging.jpg";
-import meal from "@/assets/meal.jpg";
-import shiitake from "@/assets/shiitake.jpg";
+import food1 from "@/assets/food-1.jpg";
+import food2 from "@/assets/food-2.jpg";
 
 const FORM_URL = "https://forms.gle/PretBL7rMkjdisvC7";
 
@@ -76,21 +76,23 @@ const Index = () => {
       </header>
 
       {/* DETAILS */}
-      <section id="detalhes" className="py-24 sm:py-32">
+      <section id="detalhes" className="py-20 sm:py-24">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
             {[
-              { icon: Calendar, label: "Data", value: "20 de Junho", sub: "2026" },
-              { icon: Clock, label: "Horário", value: "9h00 às 16h30", sub: "Dia completo" },
-              { icon: MapPin, label: "Local", value: "Sítio Pronobis", sub: "Agroflorestal · Campo Largo" },
+              { icon: CalendarDays, label: "Data", value: "20 Jun", sub: "2026" },
+              { icon: Clock3, label: "Horário", value: "9h–16h30", sub: "Dia completo" },
+              { icon: MapPin, label: "Local", value: "Sítio Pronobis", sub: "Campo Largo · PR" },
             ].map((item, i) => (
-              <div key={i} className="group p-8 rounded-3xl bg-card border border-border hover:border-sienna/40 transition-smooth hover:shadow-soft">
-                <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-sienna group-hover:text-cream transition-smooth">
-                  <item.icon className="w-5 h-5" />
+              <div key={i} className="group aspect-square p-4 sm:p-6 rounded-2xl bg-card border border-border hover:border-sienna/40 transition-smooth hover:shadow-soft flex flex-col justify-between">
+                <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-sienna group-hover:text-cream transition-smooth">
+                  <item.icon className="w-5 h-5" strokeWidth={1.75} />
                 </div>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">{item.label}</p>
-                <p className="font-display text-2xl font-semibold text-foreground">{item.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{item.sub}</p>
+                <div>
+                  <p className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground mb-1">{item.label}</p>
+                  <p className="font-display text-base sm:text-xl font-semibold text-foreground leading-tight">{item.value}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{item.sub}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -107,17 +109,21 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl">
             {[
-              { icon: Footprints, title: "Caminhada", desc: "Para coleta e identificação de cogumelos silvestres na mata." },
-              { icon: Search, title: "Aprendizado", desc: "Na prática com um dos maiores especialistas do Brasil." },
-              { icon: Utensils, title: "Degustação", desc: "Cogumelos silvestres comestíveis preparados na hora." },
-              { icon: TreePine, title: "Cultivo", desc: "Visita ao cultivo agroflorestal de Shiitake em toras." },
+              { icon: Compass, title: "Caminhada", desc: "Coleta e identificação de cogumelos silvestres na mata." },
+              { icon: BookOpen, title: "Aprendizado", desc: "Na prática com um dos maiores especialistas do Brasil." },
+              { icon: ChefHat, title: "Degustação", desc: "Cogumelos silvestres comestíveis preparados na hora." },
+              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo agroflorestal de Shiitake em toras." },
             ].map((item, i) => (
-              <div key={i} className="p-8 rounded-3xl bg-background border border-border/60 hover:shadow-elegant transition-smooth">
-                <item.icon className="w-8 h-8 text-sienna mb-6" strokeWidth={1.5} />
-                <h3 className="font-display text-xl font-semibold text-forest-deep mb-3">{item.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{item.desc}</p>
+              <div key={i} className="aspect-square p-5 sm:p-6 rounded-2xl bg-background border border-border/60 hover:shadow-elegant hover:border-sienna/40 transition-smooth flex flex-col justify-between">
+                <div className="w-11 h-11 rounded-xl bg-sienna/10 flex items-center justify-center text-sienna">
+                  <item.icon className="w-5 h-5" strokeWidth={1.75} />
+                </div>
+                <div>
+                  <h3 className="font-display text-lg sm:text-xl font-semibold text-forest-deep mb-1.5">{item.title}</h3>
+                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -131,10 +137,6 @@ const Index = () => {
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
                 <img src={foraging} alt="Mãos colhendo cogumelos" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
-              </div>
-              <div className="absolute -bottom-6 -right-6 bg-sienna text-cream rounded-3xl p-6 shadow-elegant max-w-[200px] hidden sm:block">
-                <p className="font-display text-3xl font-bold leading-none">15+</p>
-                <p className="text-sm mt-2 opacity-90">anos de experiência com cogumelos</p>
               </div>
             </div>
 
@@ -176,10 +178,10 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
               <div className="aspect-square rounded-3xl overflow-hidden">
-                <img src={meal} alt="Prato com cogumelos" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
+                <img src={food1} alt="Prato preparado com cogumelos silvestres" className="w-full h-full object-cover" loading="lazy" width={1600} height={1600} />
               </div>
               <div className="aspect-square rounded-3xl overflow-hidden mt-12">
-                <img src={shiitake} alt="Cultivo de Shiitake em toras" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
+                <img src={food2} alt="Refeição agroecológica da vivência" className="w-full h-full object-cover" loading="lazy" width={1600} height={1600} />
               </div>
             </div>
           </div>
