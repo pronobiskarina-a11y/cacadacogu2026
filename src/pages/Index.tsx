@@ -1,9 +1,9 @@
-import { Calendar, Clock, MapPin, Leaf, Sparkles, ArrowRight, Footprints, Search, Utensils, TreePine } from "lucide-react";
+import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroForest from "@/assets/hero-forest.jpg";
 import foraging from "@/assets/foraging.jpg";
-import meal from "@/assets/meal.jpg";
-import shiitake from "@/assets/shiitake.jpg";
+import food1 from "@/assets/food-1.jpg";
+import food2 from "@/assets/food-2.jpg";
 
 const FORM_URL = "https://forms.gle/PretBL7rMkjdisvC7";
 
