@@ -109,20 +109,20 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto lg:mx-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl">
             {[
-              { icon: Compass, title: "Caminhada", desc: "Coleta e identificação de cogumelos silvestres na mata." },
+              { icon: Compass, title: "Caminhada", desc: "Coleta e identificação na mata." },
               { icon: BookOpen, title: "Aprendizado", desc: "Com um dos maiores especialistas do Brasil." },
-              { icon: ChefHat, title: "Degustação", desc: "Cogumelos silvestres preparados na hora." },
-              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo agroflorestal de Shiitake." },
+              { icon: ChefHat, title: "Degustação", desc: "Cogumelos preparados na hora." },
+              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo de Shiitake." },
             ].map((item, i) => (
-              <div key={i} className="aspect-square p-4 rounded-2xl bg-background border border-border/60 hover:shadow-elegant hover:border-sienna/40 transition-smooth flex flex-col justify-between">
-                <div className="w-9 h-9 rounded-lg bg-sienna/10 flex items-center justify-center text-sienna">
+              <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-background border border-border/60 hover:shadow-soft hover:border-sienna/40 transition-smooth">
+                <div className="shrink-0 w-9 h-9 rounded-lg bg-sienna/10 flex items-center justify-center text-sienna">
                   <item.icon className="w-4 h-4" strokeWidth={1.75} />
                 </div>
-                <div>
-                  <h3 className="font-display text-base font-semibold text-forest-deep mb-1 leading-tight">{item.title}</h3>
-                  <p className="text-muted-foreground text-[11px] sm:text-xs leading-snug">{item.desc}</p>
+                <div className="min-w-0">
+                  <h3 className="font-display text-sm font-semibold text-forest-deep leading-tight">{item.title}</h3>
+                  <p className="text-muted-foreground text-[11px] leading-snug mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
