@@ -178,10 +178,10 @@ const Index = () => {
             </div>
             <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
               <div className="aspect-square rounded-3xl overflow-hidden">
-                <img src={meal} alt="Prato com cogumelos" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
+                <img src={food1} alt="Prato preparado com cogumelos silvestres" className="w-full h-full object-cover" loading="lazy" width={1600} height={1600} />
               </div>
               <div className="aspect-square rounded-3xl overflow-hidden mt-12">
-                <img src={shiitake} alt="Cultivo de Shiitake em toras" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
+                <img src={food2} alt="Refeição agroecológica da vivência" className="w-full h-full object-cover" loading="lazy" width={1600} height={1600} />
               </div>
             </div>
           </div>
