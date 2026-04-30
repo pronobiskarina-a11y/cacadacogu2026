@@ -100,29 +100,29 @@ const Index = () => {
       </section>
 
       {/* EXPERIENCE */}
-      <section className="py-24 sm:py-32 bg-secondary/40">
+      <section className="py-20 sm:py-24 bg-secondary/40">
         <div className="container">
-          <div className="max-w-2xl mb-16">
+          <div className="max-w-2xl mb-12">
             <p className="text-sienna text-sm uppercase tracking-widest mb-4 font-medium">A vivência</p>
             <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-forest-deep text-balance leading-tight">
               Um dia inteiro mergulhado na floresta.
             </h2>
           </div>
 
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 max-w-5xl">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 max-w-3xl mx-auto lg:mx-0">
             {[
               { icon: Compass, title: "Caminhada", desc: "Coleta e identificação de cogumelos silvestres na mata." },
-              { icon: BookOpen, title: "Aprendizado", desc: "Na prática com um dos maiores especialistas do Brasil." },
-              { icon: ChefHat, title: "Degustação", desc: "Cogumelos silvestres comestíveis preparados na hora." },
-              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo agroflorestal de Shiitake em toras." },
+              { icon: BookOpen, title: "Aprendizado", desc: "Com um dos maiores especialistas do Brasil." },
+              { icon: ChefHat, title: "Degustação", desc: "Cogumelos silvestres preparados na hora." },
+              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo agroflorestal de Shiitake." },
             ].map((item, i) => (
-              <div key={i} className="aspect-square p-5 sm:p-6 rounded-2xl bg-background border border-border/60 hover:shadow-elegant hover:border-sienna/40 transition-smooth flex flex-col justify-between">
-                <div className="w-11 h-11 rounded-xl bg-sienna/10 flex items-center justify-center text-sienna">
-                  <item.icon className="w-5 h-5" strokeWidth={1.75} />
+              <div key={i} className="aspect-square p-4 rounded-2xl bg-background border border-border/60 hover:shadow-elegant hover:border-sienna/40 transition-smooth flex flex-col justify-between">
+                <div className="w-9 h-9 rounded-lg bg-sienna/10 flex items-center justify-center text-sienna">
+                  <item.icon className="w-4 h-4" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <h3 className="font-display text-lg sm:text-xl font-semibold text-forest-deep mb-1.5">{item.title}</h3>
-                  <p className="text-muted-foreground text-xs sm:text-sm leading-relaxed">{item.desc}</p>
+                  <h3 className="font-display text-base font-semibold text-forest-deep mb-1 leading-tight">{item.title}</h3>
+                  <p className="text-muted-foreground text-[11px] sm:text-xs leading-snug">{item.desc}</p>
                 </div>
               </div>
             ))}
