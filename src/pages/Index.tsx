@@ -138,10 +138,6 @@ const Index = () => {
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
                 <img src={foraging} alt="Mãos colhendo cogumelos" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
               </div>
-              <div className="absolute -bottom-6 -right-6 bg-sienna text-cream rounded-3xl p-6 shadow-elegant max-w-[200px] hidden sm:block">
-                <p className="font-display text-3xl font-bold leading-none">15+</p>
-                <p className="text-sm mt-2 opacity-90">anos de experiência com cogumelos</p>
-              </div>
             </div>
 
             <div>
