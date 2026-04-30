@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        forest: {
+          deep: "hsl(var(--forest-deep))",
+          mid: "hsl(var(--forest-mid))",
+        },
+        moss: "hsl(var(--moss))",
+        sienna: {
+          DEFAULT: "hsl(var(--sienna))",
+          soft: "hsl(var(--sienna-soft))",
+        },
+        cream: {
+          DEFAULT: "hsl(var(--cream))",
+          warm: "hsl(var(--cream-warm))",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
