@@ -76,21 +76,23 @@ const Index = () => {
       </header>
 
       {/* DETAILS */}
-      <section id="detalhes" className="py-24 sm:py-32">
+      <section id="detalhes" className="py-20 sm:py-24">
         <div className="container">
-          <div className="grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
             {[
-              { icon: Calendar, label: "Data", value: "20 de Junho", sub: "2026" },
-              { icon: Clock, label: "Horário", value: "9h00 às 16h30", sub: "Dia completo" },
-              { icon: MapPin, label: "Local", value: "Sítio Pronobis", sub: "Agroflorestal · Campo Largo" },
+              { icon: CalendarDays, label: "Data", value: "20 Jun", sub: "2026" },
+              { icon: Clock3, label: "Horário", value: "9h–16h30", sub: "Dia completo" },
+              { icon: MapPin, label: "Local", value: "Sítio Pronobis", sub: "Campo Largo · PR" },
             ].map((item, i) => (
-              <div key={i} className="group p-8 rounded-3xl bg-card border border-border hover:border-sienna/40 transition-smooth hover:shadow-soft">
-                <div className="w-12 h-12 rounded-2xl bg-secondary flex items-center justify-center mb-6 group-hover:bg-sienna group-hover:text-cream transition-smooth">
-                  <item.icon className="w-5 h-5" />
+              <div key={i} className="group aspect-square p-4 sm:p-6 rounded-2xl bg-card border border-border hover:border-sienna/40 transition-smooth hover:shadow-soft flex flex-col justify-between">
+                <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center group-hover:bg-sienna group-hover:text-cream transition-smooth">
+                  <item.icon className="w-5 h-5" strokeWidth={1.75} />
                 </div>
-                <p className="text-xs uppercase tracking-widest text-muted-foreground mb-2">{item.label}</p>
-                <p className="font-display text-2xl font-semibold text-foreground">{item.value}</p>
-                <p className="text-sm text-muted-foreground mt-1">{item.sub}</p>
+                <div>
+                  <p className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground mb-1">{item.label}</p>
+                  <p className="font-display text-base sm:text-xl font-semibold text-foreground leading-tight">{item.value}</p>
+                  <p className="text-xs text-muted-foreground mt-0.5">{item.sub}</p>
+                </div>
               </div>
             ))}
           </div>
