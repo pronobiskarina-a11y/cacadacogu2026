@@ -46,8 +46,11 @@ const Index = () => {
               Caçada de <em className="text-sienna-soft not-italic">Cogumelos</em> Silvestres
             </h1>
 
-            <p className="text-cream/85 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed">
-              Viva a natureza, descubra sabores, aprenda e se conecte. Um dia inteiro de imersão na Mata Atlântica guiado por um dos maiores especialistas do Brasil.
+            <p className="text-cream/85 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed whitespace-pre-line">
+              Tem experiências que a gente explica.{"\n"}
+              E tem experiências que precisam ser vividas!{"\n\n"}
+              Então, viva a natureza, descubra sabores, aprenda e se conecte. Um dia inteiro de imersão guiado por um dos maiores especialistas do Brasil.{"\n\n"}
+              Vamos Caçar Cogumelos Silvestres, aprender a identificar, e claro que também vamos comer muito COGU!
             </p>
 
             <div className="flex flex-wrap gap-4">
