@@ -70,7 +70,7 @@ const Index = () => {
         {/* Floating info card */}
         <div className="hidden lg:block absolute bottom-12 right-12 z-10 animate-float">
           <div className="bg-cream/95 backdrop-blur-md rounded-3xl p-6 shadow-elegant max-w-xs">
-            <p className="font-display text-sm text-forest-deep/70 mb-1">Para todas as pessoas</p>
+            <p className="font-display text-sm text-forest-deep/70 mb-1 text-xl">Para todas as pessoas</p>
             <p className="font-display text-xl font-semibold text-forest-deep leading-tight">
               curiosas, apaixonadas por cogumelos e pela natureza 🍄
             </p>
@@ -92,7 +92,7 @@ const Index = () => {
                   <item.icon className="w-5 h-5" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <p className="text-[10px] sm:text-xs uppercase tracking-widest text-muted-foreground mb-1">{item.label}</p>
+                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-1 sm:text-lg">{item.label}</p>
                   <p className="font-display text-base sm:text-xl font-semibold text-foreground leading-tight">{item.value}</p>
                   <p className="text-xs text-muted-foreground mt-0.5">{item.sub}</p>
                 </div>
