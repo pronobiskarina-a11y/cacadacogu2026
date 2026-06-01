@@ -138,7 +138,7 @@ const Index = () => {
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
-              <div className="aspect-[4/5] w-1/2 rounded-3xl overflow-hidden shadow-elegant">
+              <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
                 <img src={foraging} alt="Mãos colhendo cogumelos" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
               </div>
             </div>
