@@ -124,8 +124,8 @@ const Index = () => {
                   <item.icon className="w-4 h-4" strokeWidth={1.75} />
                 </div>
                 <div className="min-w-0">
-                  <h3 className="font-display text-sm font-semibold text-forest-deep leading-tight">{item.title}</h3>
-                  <p className="text-muted-foreground text-[11px] leading-snug mt-0.5">{item.desc}</p>
+                  <h3 className="font-display text-base sm:text-lg font-semibold text-forest-deep leading-tight">{item.title}</h3>
+                  <p className="text-muted-foreground text-sm leading-snug mt-0.5">{item.desc}</p>
                 </div>
               </div>
             ))}
