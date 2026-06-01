@@ -92,9 +92,9 @@ const Index = () => {
                   <item.icon className="w-5 h-5" strokeWidth={1.75} />
                 </div>
                 <div>
-                  <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-1 sm:text-lg">{item.label}</p>
-                  <p className="font-display text-base sm:text-xl font-semibold text-foreground leading-tight">{item.value}</p>
-                  <p className="text-xs text-muted-foreground mt-0.5">{item.sub}</p>
+                  <p className="text-xs sm:text-sm uppercase tracking-widest text-muted-foreground mb-1">{item.label}</p>
+                  <p className="font-display text-xl sm:text-2xl font-semibold text-foreground leading-tight">{item.value}</p>
+                  <p className="text-sm text-muted-foreground mt-0.5">{item.sub}</p>
                 </div>
               </div>
             ))}
