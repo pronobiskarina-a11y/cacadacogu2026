@@ -81,7 +81,7 @@ const Index = () => {
       {/* DETAILS */}
       <section id="detalhes" className="py-20 sm:py-24">
         <div className="container">
-          <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-3xl mx-auto">
+          <div className="grid grid-cols-3 gap-4 sm:gap-6 max-w-2xl mx-auto">
             {[
               { icon: CalendarDays, label: "Data", value: "20 Jun", sub: "2026" },
               { icon: Clock3, label: "Horário", value: "9h–16h30", sub: "Dia completo" },
