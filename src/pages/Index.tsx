@@ -37,9 +37,9 @@ const Index = () => {
 
         <div className="container relative z-10 py-24">
           <div className="max-w-3xl animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-sm mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-base mb-8">
               <Sparkles className="w-4 h-4 text-sienna-soft" />
-              <span>Vivência na Mata Atlântica · 20 de Junho 2026</span>
+              <span>20 de Junho 2026 - Campo Largo/ Paraná</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] text-balance mb-6">
