@@ -53,10 +53,22 @@ const Index = () => {
               Vamos Caçar Cogumelos Silvestres, aprender a identificar, e claro que também vamos comer muito COGU!
             </p>
 
+            <div className="mb-8">
+              <p className="font-display text-4xl sm:text-5xl font-bold text-cream leading-none">
+                R$ 497,00
+              </p>
+              <p className="text-cream/80 text-sm sm:text-base mt-2">
+                Com almoço agroecológico preparado pelo Chef Felipe — TEKOA incluso
+              </p>
+              <p className="inline-block mt-3 px-3 py-1 rounded-full bg-sienna/90 text-cream text-sm font-medium">
+                Restam 11 vagas!
+              </p>
+            </div>
+
             <div className="flex flex-wrap gap-4">
               <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Maiores Informações
+                  Maiores informações
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
@@ -64,6 +76,7 @@ const Index = () => {
                 <a href="#detalhes">Ver detalhes</a>
               </Button>
             </div>
+
           </div>
         </div>
 
