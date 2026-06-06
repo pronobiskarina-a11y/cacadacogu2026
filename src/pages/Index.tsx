@@ -1,4 +1,4 @@
-import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout, Quote } from "lucide-react";
+import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroForest from "@/assets/hero-forest.jpg";
@@ -6,6 +6,13 @@ import foraging from "@/assets/foraging.jpg";
 
 import food1 from "@/assets/food-1.jpg";
 import food2 from "@/assets/food-2.jpg";
+import t1 from "@/assets/testimonials/WhatsApp_Image_2026-06-06_at_04.30.15.jpg.asset.json";
+import t2 from "@/assets/testimonials/WhatsApp_Image_2026-06-06_at_04.29.33.jpg.asset.json";
+import t3 from "@/assets/testimonials/WhatsApp_Image_2026-06-06_at_04.29.04.jpg.asset.json";
+import t4 from "@/assets/testimonials/WhatsApp_Image_2026-06-06_at_04.28.51.jpg.asset.json";
+import t5 from "@/assets/testimonials/WhatsApp_Image_2026-06-06_at_04.27.44.jpg.asset.json";
+import t6 from "@/assets/testimonials/WhatsApp_Image_2026-06-06_at_04.27.13.jpg.asset.json";
+
 
 const FORM_URL = "https://forms.gle/PretBL7rMkjdisvC7";
 
