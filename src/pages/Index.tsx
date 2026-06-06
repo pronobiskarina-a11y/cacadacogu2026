@@ -164,6 +164,80 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="py-20 sm:py-24 bg-secondary/40">
+        <div className="container">
+          <div className="max-w-2xl mb-12">
+            <p className="text-sienna text-sm uppercase tracking-widest mb-4 font-medium">Depoimentos</p>
+            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-forest-deep text-balance leading-tight">
+              Quem viveu, conta.
+            </h2>
+            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
+              Mensagens reais de participantes da caçada do ano passado.
+            </p>
+          </div>
+
+          <Carousel opts={{ align: "start", loop: true }} className="max-w-5xl mx-auto">
+            <CarouselContent>
+              {[
+                {
+                  text: "Pessoal, a experiência foi incrível demais! Amei conhecer todos vocês 🤍",
+                  author: "Participante",
+                },
+                {
+                  text: "Olá queridos, ontem foi um dia muito especial. Gratidão pela acolhida e pela linda experiência. Almoço delicioso, sobremesa incrível, uma explosão de sabores. Paisagem fantástica. A companhia de todos os participantes foi muito agradável. Gratidão profunda 🙏✨",
+                  author: "Participante",
+                },
+                {
+                  text: "Nós (Christian, Iris e Benício) amamooos tbm! Obrigada a todos os envolvidos, foi uma delícia participar dessa experiência! 🍄",
+                  author: "Christian, Iris e Benício",
+                },
+                {
+                  text: "Ontem cheguei satisfeita e dormi numa floresta! Agradecer cada um e principalmente a equipe organizadora. Foi um dia agradabilíssimo!",
+                  author: "Participante",
+                },
+                {
+                  text: "Pessoal, Amanda aqui! Hoje foi um dia muito especial, sinto que sou uma mulher muito mais feliz com os conhecimentos, práticas e trocas de hoje! Muito obrigada a todes! Foi incrível!!",
+                  author: "Amanda",
+                },
+                {
+                  text: "Adorei. Parabéns Tales, Karina, Jefferson e chef Felipe. Dia incrível. 🍄👏",
+                  author: "Participante",
+                },
+                {
+                  text: "Dia incrível! Obrigada pela experiência, pelo almoço e a todos pela recepção!",
+                  author: "@erica_ayabe",
+                },
+                {
+                  text: "Muito obrigada, pessoal! Foi um dia maravilhoso! ❤️🍄",
+                  author: "@gihakemi",
+                },
+                {
+                  text: "Tales e Karina! Foi um prazer imenso conhecê-los!! Muito obrigada por dividirem conosco um pouco da experiência de vocês!! ❤️🍄🍄",
+                  author: "Participante",
+                },
+              ].map((t, i) => (
+                <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
+                  <div className="h-full p-6 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth flex flex-col">
+                    <Quote className="w-6 h-6 text-sienna mb-4 shrink-0" strokeWidth={1.5} />
+                    <p className="text-foreground/90 leading-relaxed text-base flex-1">
+                      {t.text}
+                    </p>
+                    <p className="mt-4 text-sm font-medium text-sienna">— {t.author}</p>
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden sm:block">
+              <CarouselPrevious className="-left-4 lg:-left-12" />
+              <CarouselNext className="-right-4 lg:-right-12" />
+            </div>
+          </Carousel>
+        </div>
+      </section>
+
+
+
       {/* GUIDE */}
       <section className="py-24 sm:py-32">
         <div className="container">
