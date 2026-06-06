@@ -72,9 +72,13 @@ const Index = () => {
               <p className="text-cream/80 text-sm sm:text-base mt-2">
                 Com almoço agroecológico preparado pelo Chef Felipe — TEKOA incluso
               </p>
-              <p className="inline-block mt-3 px-3 py-1 rounded-full bg-sienna/90 text-cream text-sm font-medium">
-                Restam 11 vagas!
+              <p className="text-cream/70 text-xs sm:text-sm mt-1">
+                em até 4x no cartão
               </p>
+              <p className="inline-block mt-3 px-3 py-1 rounded-full bg-sienna/90 text-cream text-sm font-medium">
+                Restam 8 vagas!
+              </p>
+
             </div>
 
             <div className="flex flex-wrap gap-4">
