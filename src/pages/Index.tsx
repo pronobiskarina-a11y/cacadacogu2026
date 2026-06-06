@@ -184,16 +184,16 @@ const Index = () => {
             </p>
           </div>
 
-          <Carousel opts={{ align: "start", loop: true }} className="max-w-5xl mx-auto">
+          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
             <CarouselContent>
               {[t1, t2, t3, t4, t5, t6].map((img, i) => (
-                <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="h-full p-2 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
+                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
+                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
                     <img
                       src={img.url}
                       alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
                       loading="lazy"
-                      className="w-full h-auto rounded-xl object-contain"
+                      className="w-full h-auto rounded-lg object-contain"
                     />
                   </div>
                 </CarouselItem>
