@@ -186,54 +186,19 @@ const Index = () => {
 
           <Carousel opts={{ align: "start", loop: true }} className="max-w-5xl mx-auto">
             <CarouselContent>
-              {[
-                {
-                  text: "Pessoal, a experiência foi incrível demais! Amei conhecer todos vocês 🤍",
-                  author: "Participante",
-                },
-                {
-                  text: "Olá queridos, ontem foi um dia muito especial. Gratidão pela acolhida e pela linda experiência. Almoço delicioso, sobremesa incrível, uma explosão de sabores. Paisagem fantástica. A companhia de todos os participantes foi muito agradável. Gratidão profunda 🙏✨",
-                  author: "Participante",
-                },
-                {
-                  text: "Nós (Christian, Iris e Benício) amamooos tbm! Obrigada a todos os envolvidos, foi uma delícia participar dessa experiência! 🍄",
-                  author: "Christian, Iris e Benício",
-                },
-                {
-                  text: "Ontem cheguei satisfeita e dormi numa floresta! Agradecer cada um e principalmente a equipe organizadora. Foi um dia agradabilíssimo!",
-                  author: "Participante",
-                },
-                {
-                  text: "Pessoal, Amanda aqui! Hoje foi um dia muito especial, sinto que sou uma mulher muito mais feliz com os conhecimentos, práticas e trocas de hoje! Muito obrigada a todes! Foi incrível!!",
-                  author: "Amanda",
-                },
-                {
-                  text: "Adorei. Parabéns Tales, Karina, Jefferson e chef Felipe. Dia incrível. 🍄👏",
-                  author: "Participante",
-                },
-                {
-                  text: "Dia incrível! Obrigada pela experiência, pelo almoço e a todos pela recepção!",
-                  author: "@erica_ayabe",
-                },
-                {
-                  text: "Muito obrigada, pessoal! Foi um dia maravilhoso! ❤️🍄",
-                  author: "@gihakemi",
-                },
-                {
-                  text: "Tales e Karina! Foi um prazer imenso conhecê-los!! Muito obrigada por dividirem conosco um pouco da experiência de vocês!! ❤️🍄🍄",
-                  author: "Participante",
-                },
-              ].map((t, i) => (
+              {[t1, t2, t3, t4, t5, t6].map((img, i) => (
                 <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
-                  <div className="h-full p-6 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth flex flex-col">
-                    <Quote className="w-6 h-6 text-sienna mb-4 shrink-0" strokeWidth={1.5} />
-                    <p className="text-foreground/90 leading-relaxed text-base flex-1">
-                      {t.text}
-                    </p>
-                    <p className="mt-4 text-sm font-medium text-sienna">— {t.author}</p>
+                  <div className="h-full p-2 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
+                    <img
+                      src={img.url}
+                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
+                      loading="lazy"
+                      className="w-full h-auto rounded-xl object-contain"
+                    />
                   </div>
                 </CarouselItem>
               ))}
+
             </CarouselContent>
             <div className="hidden sm:block">
               <CarouselPrevious className="-left-4 lg:-left-12" />
