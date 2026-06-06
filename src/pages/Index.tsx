@@ -1,7 +1,9 @@
-import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout } from "lucide-react";
+import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout, Quote } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroForest from "@/assets/hero-forest.jpg";
 import foraging from "@/assets/foraging.jpg";
+
 import food1 from "@/assets/food-1.jpg";
 import food2 from "@/assets/food-2.jpg";
 
