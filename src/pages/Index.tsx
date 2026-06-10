@@ -32,15 +32,23 @@ const Index = () => {
         </svg>
       </a>
 
-      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-2 font-display font-bold text-lg">
-            <Leaf className="w-5 h-5 text-sienna" />
-            <span>Caçada de Cogumelos</span>
+      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/40">
+        <div className="container flex items-center justify-between py-3 gap-3">
+          <div className="flex items-center gap-2 font-display font-bold text-sm sm:text-lg min-w-0">
+            <Leaf className="w-5 h-5 text-sienna shrink-0" />
+            <span className="truncate">Caçada de Cogumelos</span>
           </div>
-          <Button asChild size="sm" className="bg-forest-deep hover:bg-forest-mid text-cream rounded-full">
-            <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Inscreva-se</a>
-          </Button>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="hidden sm:inline text-xs sm:text-sm font-medium text-sienna">
+              Restam 8 vagas · 20/06
+            </span>
+            <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
+            </Button>
+          </div>
+        </div>
+        <div className="sm:hidden bg-sienna text-cream text-center text-xs font-medium py-1.5 px-3">
+          🍄 Restam 8 vagas · Caçada em 20 de Junho
         </div>
       </nav>
 
