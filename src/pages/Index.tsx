@@ -40,7 +40,7 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline text-xs sm:text-sm font-medium text-sienna">
-              Restam 8 vagas · 20/06
+              Restam 6 vagas · 20/06
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
@@ -48,7 +48,7 @@ const Index = () => {
           </div>
         </div>
         <div className="sm:hidden bg-sienna text-cream text-center text-xs font-medium py-1.5 px-3">
-          🍄 Restam 8 vagas · Caçada em 20 de Junho
+          🍄 Restam 6 vagas · Caçada em 20 de Junho
         </div>
       </nav>
 
@@ -91,7 +91,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 <span className="px-3 py-1 rounded-full bg-sienna text-cream text-sm font-semibold">
-                  🔥 Restam 8 vagas
+                  🔥 Restam 6 vagas
                 </span>
                 <span className="px-3 py-1 rounded-full bg-cream/20 text-cream text-sm font-medium">
                   Últimos dias para inscrição
