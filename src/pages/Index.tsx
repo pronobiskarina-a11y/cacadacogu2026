@@ -149,6 +149,51 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="py-16 sm:py-20">
+        <div className="container">
+          <div className="max-w-2xl mb-10">
+            <p className="text-sienna text-sm uppercase tracking-widest mb-3 font-medium">Depoimentos</p>
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-forest-deep text-balance leading-tight">
+              Quem viveu, conta.
+            </h2>
+            <p className="text-muted-foreground mt-3 text-base">
+              Mensagens reais de participantes da caçada do ano passado.
+            </p>
+          </div>
+
+          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
+            <CarouselContent>
+              {[t1, t2, t3, t4, t5, t6].map((img, i) => (
+                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
+                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
+                    <img
+                      src={img.url}
+                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
+                      loading="lazy"
+                      className="w-full h-auto rounded-lg object-contain"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden sm:block">
+              <CarouselPrevious className="-left-4 lg:-left-12" />
+              <CarouselNext className="-right-4 lg:-right-12" />
+            </div>
+          </Carousel>
+
+          <div className="text-center mt-10">
+            <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                Quero minha vaga · R$ 497 ou 4x R$ 124,25
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* EXPERIENCE */}
       <section className="py-20 sm:py-24 bg-secondary/40">
         <div className="container">
@@ -177,43 +222,6 @@ const Index = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-20 sm:py-24 bg-secondary/40">
-        <div className="container">
-          <div className="max-w-2xl mb-12">
-            <p className="text-sienna text-sm uppercase tracking-widest mb-4 font-medium">Depoimentos</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-forest-deep text-balance leading-tight">
-              Quem viveu, conta.
-            </h2>
-            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-              Mensagens reais de participantes da caçada do ano passado.
-            </p>
-          </div>
-
-          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
-            <CarouselContent>
-              {[t1, t2, t3, t4, t5, t6].map((img, i) => (
-                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
-                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
-                    <img
-                      src={img.url}
-                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
-                      loading="lazy"
-                      className="w-full h-auto rounded-lg object-contain"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-
-            </CarouselContent>
-            <div className="hidden sm:block">
-              <CarouselPrevious className="-left-4 lg:-left-12" />
-              <CarouselNext className="-right-4 lg:-right-12" />
-            </div>
-          </Carousel>
         </div>
       </section>
 
