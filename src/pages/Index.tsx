@@ -66,47 +66,48 @@ const Index = () => {
 
         <div className="container relative z-10 py-24">
           <div className="max-w-3xl animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-base mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-sm sm:text-base mb-6">
               <Sparkles className="w-4 h-4 text-sienna-soft" />
-              <span>20 de Junho 2026 - Campo Largo/ Paraná</span>
+              <span>20 de Junho 2026 · Campo Largo/PR</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] text-balance mb-6">
               Caçada de <em className="text-sienna-soft not-italic">Cogumelos</em> Silvestres
             </h1>
 
-            <p className="text-cream/85 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed whitespace-pre-line">
-              Tem experiências que a gente explica.{"\n"}
-              E tem experiências que precisam ser vividas!{"\n\n"}
-              Então, viva a natureza, descubra sabores, aprenda e se conecte. Um dia inteiro de imersão guiado por um dos maiores especialistas do Brasil.{"\n\n"}
-              Vamos Caçar Cogumelos Silvestres, aprender a identificar, e claro que também vamos comer muito COGU!
+            <p className="text-cream/90 text-lg sm:text-xl max-w-xl mb-8 leading-relaxed">
+              Um dia inteiro na Mata Atlântica caçando, identificando e provando cogumelos silvestres — guiado por um dos maiores especialistas do Brasil.
             </p>
 
-            <div className="mb-8">
+            <div className="mb-8 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-2xl p-5 max-w-md">
               <p className="font-display text-4xl sm:text-5xl font-bold text-cream leading-none">
                 R$ 497,00
               </p>
-              <p className="text-cream/80 text-sm sm:text-base mt-2">
-                Com almoço agroecológico preparado pelo Chef Felipe — TEKOA incluso
+              <p className="text-cream/90 text-sm sm:text-base mt-2 font-medium">
+                ou <strong>4x de R$ 124,25</strong> no cartão
               </p>
-              <p className="text-cream/70 text-xs sm:text-sm mt-1">
-                em até 4x no cartão
+              <p className="text-cream/80 text-xs sm:text-sm mt-1">
+                Almoço agroecológico do Chef Felipe — TEKOA incluso
               </p>
-              <p className="inline-block mt-3 px-3 py-1 rounded-full bg-sienna/90 text-cream text-sm font-medium">
-                Restam 8 vagas!
-              </p>
-
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="px-3 py-1 rounded-full bg-sienna text-cream text-sm font-semibold">
+                  🔥 Restam 8 vagas
+                </span>
+                <span className="px-3 py-1 rounded-full bg-cream/20 text-cream text-sm font-medium">
+                  Últimos dias para inscrição
+                </span>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Maiores informações
+                  Quero minha vaga
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full px-8 h-14 text-base bg-transparent border-cream/40 text-cream hover:bg-cream hover:text-forest-deep">
-                <a href="#detalhes">Ver detalhes</a>
+                <a href="https://wa.me/5541997411989" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
               </Button>
             </div>
 
