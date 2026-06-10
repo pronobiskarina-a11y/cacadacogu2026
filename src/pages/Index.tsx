@@ -32,15 +32,23 @@ const Index = () => {
         </svg>
       </a>
 
-      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/70 border-b border-border/40">
-        <div className="container flex items-center justify-between py-4">
-          <div className="flex items-center gap-2 font-display font-bold text-lg">
-            <Leaf className="w-5 h-5 text-sienna" />
-            <span>Caçada de Cogumelos</span>
+      <nav className="fixed top-0 inset-x-0 z-50 backdrop-blur-md bg-background/85 border-b border-border/40">
+        <div className="container flex items-center justify-between py-3 gap-3">
+          <div className="flex items-center gap-2 font-display font-bold text-sm sm:text-lg min-w-0">
+            <Leaf className="w-5 h-5 text-sienna shrink-0" />
+            <span className="truncate">Caçada de Cogumelos</span>
           </div>
-          <Button asChild size="sm" className="bg-forest-deep hover:bg-forest-mid text-cream rounded-full">
-            <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Inscreva-se</a>
-          </Button>
+          <div className="flex items-center gap-2 sm:gap-3">
+            <span className="hidden sm:inline text-xs sm:text-sm font-medium text-sienna">
+              Restam 8 vagas · 20/06
+            </span>
+            <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
+            </Button>
+          </div>
+        </div>
+        <div className="sm:hidden bg-sienna text-cream text-center text-xs font-medium py-1.5 px-3">
+          🍄 Restam 8 vagas · Caçada em 20 de Junho
         </div>
       </nav>
 
@@ -58,47 +66,48 @@ const Index = () => {
 
         <div className="container relative z-10 py-24">
           <div className="max-w-3xl animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-base mb-8">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-sm sm:text-base mb-6">
               <Sparkles className="w-4 h-4 text-sienna-soft" />
-              <span>20 de Junho 2026 - Campo Largo/ Paraná</span>
+              <span>20 de Junho 2026 · Campo Largo/PR</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] text-balance mb-6">
               Caçada de <em className="text-sienna-soft not-italic">Cogumelos</em> Silvestres
             </h1>
 
-            <p className="text-cream/85 text-lg sm:text-xl max-w-xl mb-10 leading-relaxed whitespace-pre-line">
-              Tem experiências que a gente explica.{"\n"}
-              E tem experiências que precisam ser vividas!{"\n\n"}
-              Então, viva a natureza, descubra sabores, aprenda e se conecte. Um dia inteiro de imersão guiado por um dos maiores especialistas do Brasil.{"\n\n"}
-              Vamos Caçar Cogumelos Silvestres, aprender a identificar, e claro que também vamos comer muito COGU!
+            <p className="text-cream/90 text-lg sm:text-xl max-w-xl mb-8 leading-relaxed">
+              Um dia inteiro na Mata Atlântica caçando, identificando e provando cogumelos silvestres — guiado por um dos maiores especialistas do Brasil.
             </p>
 
-            <div className="mb-8">
+            <div className="mb-8 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-2xl p-5 max-w-md">
               <p className="font-display text-4xl sm:text-5xl font-bold text-cream leading-none">
                 R$ 497,00
               </p>
-              <p className="text-cream/80 text-sm sm:text-base mt-2">
-                Com almoço agroecológico preparado pelo Chef Felipe — TEKOA incluso
+              <p className="text-cream/90 text-sm sm:text-base mt-2 font-medium">
+                ou <strong>4x de R$ 124,25</strong> no cartão
               </p>
-              <p className="text-cream/70 text-xs sm:text-sm mt-1">
-                em até 4x no cartão
+              <p className="text-cream/80 text-xs sm:text-sm mt-1">
+                Almoço agroecológico do Chef Felipe — TEKOA incluso
               </p>
-              <p className="inline-block mt-3 px-3 py-1 rounded-full bg-sienna/90 text-cream text-sm font-medium">
-                Restam 8 vagas!
-              </p>
-
+              <div className="flex flex-wrap gap-2 mt-4">
+                <span className="px-3 py-1 rounded-full bg-sienna text-cream text-sm font-semibold">
+                  🔥 Restam 8 vagas
+                </span>
+                <span className="px-3 py-1 rounded-full bg-cream/20 text-cream text-sm font-medium">
+                  Últimos dias para inscrição
+                </span>
+              </div>
             </div>
 
-            <div className="flex flex-wrap gap-4">
+            <div className="flex flex-wrap gap-3">
               <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Maiores informações
+                  Quero minha vaga
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full px-8 h-14 text-base bg-transparent border-cream/40 text-cream hover:bg-cream hover:text-forest-deep">
-                <a href="#detalhes">Ver detalhes</a>
+                <a href="https://wa.me/5541997411989" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
               </Button>
             </div>
 
@@ -140,6 +149,51 @@ const Index = () => {
         </div>
       </section>
 
+      {/* TESTIMONIALS */}
+      <section className="py-16 sm:py-20">
+        <div className="container">
+          <div className="max-w-2xl mb-10">
+            <p className="text-sienna text-sm uppercase tracking-widest mb-3 font-medium">Depoimentos</p>
+            <h2 className="font-display text-3xl sm:text-5xl font-bold text-forest-deep text-balance leading-tight">
+              Quem viveu, conta.
+            </h2>
+            <p className="text-muted-foreground mt-3 text-base">
+              Mensagens reais de participantes da caçada do ano passado.
+            </p>
+          </div>
+
+          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
+            <CarouselContent>
+              {[t1, t2, t3, t4, t5, t6].map((img, i) => (
+                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
+                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
+                    <img
+                      src={img.url}
+                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
+                      loading="lazy"
+                      className="w-full h-auto rounded-lg object-contain"
+                    />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <div className="hidden sm:block">
+              <CarouselPrevious className="-left-4 lg:-left-12" />
+              <CarouselNext className="-right-4 lg:-right-12" />
+            </div>
+          </Carousel>
+
+          <div className="text-center mt-10">
+            <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                Quero minha vaga · R$ 497 ou 4x R$ 124,25
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* EXPERIENCE */}
       <section className="py-20 sm:py-24 bg-secondary/40">
         <div className="container">
@@ -168,43 +222,6 @@ const Index = () => {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* TESTIMONIALS */}
-      <section className="py-20 sm:py-24 bg-secondary/40">
-        <div className="container">
-          <div className="max-w-2xl mb-12">
-            <p className="text-sienna text-sm uppercase tracking-widest mb-4 font-medium">Depoimentos</p>
-            <h2 className="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-forest-deep text-balance leading-tight">
-              Quem viveu, conta.
-            </h2>
-            <p className="text-muted-foreground mt-4 text-base sm:text-lg">
-              Mensagens reais de participantes da caçada do ano passado.
-            </p>
-          </div>
-
-          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
-            <CarouselContent>
-              {[t1, t2, t3, t4, t5, t6].map((img, i) => (
-                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
-                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
-                    <img
-                      src={img.url}
-                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
-                      loading="lazy"
-                      className="w-full h-auto rounded-lg object-contain"
-                    />
-                  </div>
-                </CarouselItem>
-              ))}
-
-            </CarouselContent>
-            <div className="hidden sm:block">
-              <CarouselPrevious className="-left-4 lg:-left-12" />
-              <CarouselNext className="-right-4 lg:-right-12" />
-            </div>
-          </Carousel>
         </div>
       </section>
 
