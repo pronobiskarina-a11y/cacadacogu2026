@@ -39,16 +39,16 @@ const Index = () => {
             <span className="truncate">Caçada de Cogumelos</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="hidden sm:inline text-xs sm:text-sm font-medium text-sienna">
-              Restam 6 vagas · 20/06
+            <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
+              ÚLTIMAS VAGAS · 20/06
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
             </Button>
           </div>
         </div>
-        <div className="sm:hidden bg-sienna text-cream text-center text-xs font-medium py-1.5 px-3">
-          🍄 Restam 6 vagas · Caçada em 20 de Junho
+        <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
+          🍄 ÚLTIMAS VAGAS · Caçada em 20 de Junho
         </div>
       </nav>
 
@@ -90,8 +90,8 @@ const Index = () => {
                 Almoço agroecológico do Chef Felipe — TEKOA incluso
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
-                <span className="px-3 py-1 rounded-full bg-sienna text-cream text-sm font-semibold">
-                  🔥 Restam 6 vagas
+                <span className="px-4 py-2 rounded-full bg-sienna text-cream text-base font-bold uppercase tracking-wide animate-pulse">
+                  🔥 ÚLTIMAS VAGAS
                 </span>
                 <span className="px-3 py-1 rounded-full bg-cream/20 text-cream text-sm font-medium">
                   Últimos dias para inscrição
