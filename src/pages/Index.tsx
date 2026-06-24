@@ -59,92 +59,89 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* HERO */}
-      <header className="relative min-h-screen flex items-center pt-20 overflow-hidden">
+      {/* HERO — editorial magazine layout */}
+      <header className="relative min-h-screen pt-20 overflow-hidden bg-forest-deep">
         <img
           src={heroForest}
           alt="Floresta da Mata Atlântica com cogumelos silvestres"
-          className="absolute inset-0 w-full h-full object-cover"
+          className="absolute inset-0 w-full h-full object-cover opacity-60"
           width={1920}
           height={1280}
         />
-        <div className="absolute inset-0" style={{ background: 'var(--gradient-overlay)' }} />
-        <div className="absolute inset-0 bg-forest-deep/40" />
+        <div className="absolute inset-0 bg-gradient-to-br from-forest-deep/95 via-forest-deep/70 to-forest-deep/95" />
 
-        <div className="container relative z-10 py-24">
-          <div className="max-w-3xl animate-fade-up">
-            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-sm sm:text-base mb-6">
-              <Sparkles className="w-4 h-4 text-sienna-soft" />
-              <span>Nova edição · 25 de Julho de 2026 · Campo Largo/PR</span>
+        {/* Vertical edition rail */}
+        <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 flex-col items-center gap-4 text-cream/70">
+          <span className="font-stencil text-xs tracking-[0.3em]">EDIÇÃO</span>
+          <span className="font-display text-5xl font-bold text-sienna-soft leading-none">04</span>
+          <div className="w-px h-24 bg-cream/30" />
+          <span className="vertical-rl font-stencil text-xs tracking-[0.3em]">JULHO · 2026</span>
+        </div>
+
+        {/* Corner date stamp */}
+        <div className="absolute top-24 right-6 sm:right-10 z-20 rotate-12">
+          <div className="border-2 border-sienna-soft/80 rounded-full w-28 h-28 sm:w-36 sm:h-36 flex flex-col items-center justify-center text-center text-cream backdrop-blur-sm bg-forest-deep/30">
+            <span className="font-stencil text-[10px] sm:text-xs tracking-[0.2em] text-sienna-soft">SÁBADO</span>
+            <span className="font-display text-3xl sm:text-5xl font-black leading-none my-1">25</span>
+            <span className="font-stencil text-[10px] sm:text-xs tracking-[0.2em]">JUL · 2026</span>
+          </div>
+        </div>
+
+        <div className="container relative z-10 py-16 lg:pl-24">
+          <div className="max-w-4xl animate-fade-up">
+            <div className="flex items-center gap-3 mb-8">
+              <div className="h-px w-12 bg-sienna-soft" />
+              <span className="font-stencil text-cream/80 text-sm sm:text-base tracking-[0.25em]">
+                NOVA EDIÇÃO · MATA ATLÂNTICA
+              </span>
             </div>
 
-            <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] text-balance mb-6">
-              Caçada de <em className="text-sienna-soft not-italic">Cogumelos</em> Silvestres
+            <h1 className="font-display text-[3.5rem] sm:text-8xl lg:text-[9rem] font-black text-cream leading-[0.85] text-balance mb-2">
+              Caçada de
+            </h1>
+            <h1 className="font-display italic text-[3.5rem] sm:text-8xl lg:text-[9rem] font-light text-sienna-soft leading-[0.85] text-balance mb-8 -mt-2">
+              Cogumelos<span className="text-cream not-italic font-black">.</span>
             </h1>
 
-            <p className="text-cream/90 text-lg sm:text-xl max-w-xl mb-8 leading-relaxed">
-              Um dia inteiro na Mata Atlântica caçando, identificando, cozinhando e <strong className="text-cream">degustando</strong> cogumelos silvestres — guiado por Jeferson Müller Timm, autor do livro <em>Primavera Fungi</em> e um dos maiores especialistas do Brasil.
+            <p className="text-cream/90 text-lg sm:text-2xl max-w-2xl mb-10 leading-relaxed font-light">
+              Um dia inteiro <strong className="font-semibold">caçando, identificando, cozinhando e degustando</strong> cogumelos silvestres na floresta — guiado por <strong className="font-semibold text-cream">Jeferson Müller Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
             </p>
 
-            <div className="mb-8 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-2xl p-5 max-w-md">
-              <p className="font-display text-4xl sm:text-5xl font-bold text-cream leading-none">
-                R$ 497,00
-              </p>
-              <p className="text-cream/90 text-sm sm:text-base mt-2 font-medium">
-                ou <strong>4x de R$ 124,25</strong> no cartão
-              </p>
-              <p className="text-cream/80 text-xs sm:text-sm mt-1">
-                Almoço agroecológico do Chef Felipe — TEKOA incluso
-              </p>
-              <div className="flex flex-wrap gap-2 mt-4">
-                <span className="px-4 py-2 rounded-full bg-sienna text-cream text-base font-bold uppercase tracking-wide animate-pulse">
-                  🔥 VAGAS LIMITADAS
-                </span>
+            <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
+              <div className="border-l-4 border-sienna pl-5">
+                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">INVESTIMENTO</p>
+                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$497</p>
+                <p className="text-cream/80 text-sm mt-2">
+                  ou <strong className="text-cream">4x R$ 124,25</strong> · almoço incluso
+                </p>
               </div>
-            </div>
 
-            <div className="mb-6 bg-forest-deep/70 backdrop-blur-md border border-sienna/30 rounded-2xl p-4 max-w-md flex items-start gap-3">
-              <Sparkles className="w-5 h-5 text-sienna-soft shrink-0 mt-0.5" />
-              <div>
-                <p className="text-cream text-sm font-semibold leading-snug">
-                  Descontos especiais para inscrições em dupla ou grupos maiores!
+              <div className="bg-cream/5 backdrop-blur-md border border-cream/15 rounded-2xl p-4">
+                <p className="text-cream text-sm font-medium leading-snug mb-2">
+                  ✨ Descontos para <strong>duplas e grupos</strong>
                 </p>
                 <a
                   href="https://wa.me/5541997411989?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20dupla%20ou%20grupo%20—%20pode%20me%20passar%20os%20valores?"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 mt-2 px-4 py-1.5 rounded-full bg-[#25D366] text-white text-sm font-medium hover:bg-[#1ebe57] transition-colors"
+                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366] text-white text-xs font-semibold hover:bg-[#1ebe57] transition-colors"
                 >
-                  Garanta seu desconto
-                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-4 h-4">
-                    <path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.82 11.82 0 018.413 3.488 11.82 11.82 0 013.48 8.414c-.003 6.555-5.338 11.89-11.893 11.89a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.149-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413z"/>
-                  </svg>
+                  Garanta seu desconto →
                 </a>
               </div>
             </div>
 
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
+            <div className="flex flex-wrap gap-3 items-center">
+              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
                   Quero minha vaga
-                  <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                  <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-full px-8 h-14 text-base bg-transparent border-cream/40 text-cream hover:bg-cream hover:text-forest-deep">
-                <a href="https://wa.me/5541997411989" target="_blank" rel="noopener noreferrer">Fale no WhatsApp</a>
-              </Button>
+              <span className="font-stencil text-cream/70 text-sm tracking-[0.2em] ml-2 animate-pulse">
+                ◉ VAGAS LIMITADAS
+              </span>
             </div>
-
-          </div>
-        </div>
-
-        {/* Floating info card */}
-        <div className="hidden lg:block absolute bottom-12 right-12 z-10 animate-float">
-          <div className="bg-cream/95 backdrop-blur-md rounded-3xl p-6 shadow-elegant max-w-xs">
-            <p className="font-display text-sm text-forest-deep/70 mb-1 text-xl">Para todas as pessoas</p>
-            <p className="font-display text-xl font-semibold text-forest-deep leading-tight">
-              curiosas, apaixonadas por cogumelos e pela natureza 🍄
-            </p>
           </div>
         </div>
       </header>
@@ -174,44 +171,47 @@ const Index = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-28 bg-secondary/30 paper-grain">
         <div className="container">
-          <div className="max-w-2xl mb-10">
-            <p className="text-sienna text-sm uppercase tracking-widest mb-3 font-medium">Depoimentos</p>
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-forest-deep text-balance leading-tight">
-              Quem viveu, conta.
+          <div className="max-w-3xl mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-10 bg-sienna" />
+              <p className="font-stencil text-sienna text-sm tracking-[0.3em]">DEPOIMENTOS · EDIÇÕES ANTERIORES</p>
+            </div>
+            <h2 className="font-display text-4xl sm:text-6xl font-black text-forest-deep text-balance leading-[0.95]">
+              Quem viveu, <em className="text-sienna font-light">conta.</em>
             </h2>
-            <p className="text-muted-foreground mt-3 text-base">
-              Mensagens reais de participantes das edições anteriores da Caçada.
+            <p className="text-muted-foreground mt-4 text-lg">
+              Mensagens reais de participantes — recebidas via WhatsApp depois da vivência.
             </p>
           </div>
 
-          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
-            <CarouselContent>
+          <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto">
+            <CarouselContent className="-ml-4">
               {[tn1, tn2, tn3, t1, t2, t3, t4, t5, t6].map((img, i) => (
-                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
-                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
+                <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="h-full p-3 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-elegant transition-smooth">
                     <img
                       src={img.url}
-                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
+                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos`}
                       loading="lazy"
-                      className="w-full h-auto rounded-lg object-contain"
+                      className="w-full h-auto rounded-xl object-contain"
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
             <div className="hidden sm:block">
-              <CarouselPrevious className="-left-4 lg:-left-12" />
-              <CarouselNext className="-right-4 lg:-right-12" />
+              <CarouselPrevious className="-left-4 lg:-left-14" />
+              <CarouselNext className="-right-4 lg:-right-14" />
             </div>
           </Carousel>
 
-          <div className="text-center mt-10">
-            <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · R$ 497 ou 4x R$ 124,25
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                Quero minha vaga · R$ 497
+                <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </div>
