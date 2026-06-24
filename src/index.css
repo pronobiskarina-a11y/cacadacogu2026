@@ -75,7 +75,8 @@
 }
 
 @layer utilities {
-  .font-display { font-family: 'Fraunces', serif; }
+  .font-display { font-family: 'Fraunces', serif; font-variation-settings: 'opsz' 144; }
+  .font-stencil { font-family: 'Bebas Neue', sans-serif; letter-spacing: 0.04em; }
   .text-balance { text-wrap: balance; }
   .gradient-forest { background: var(--gradient-forest); }
   .gradient-warm { background: var(--gradient-warm); }
@@ -83,6 +84,11 @@
   .shadow-elegant { box-shadow: var(--shadow-elegant); }
   .shadow-glow { box-shadow: var(--shadow-glow); }
   .transition-smooth { transition: var(--transition-smooth); }
+  .paper-grain {
+    background-image: radial-gradient(hsl(var(--forest-deep) / 0.04) 1px, transparent 1px);
+    background-size: 4px 4px;
+  }
+  .vertical-rl { writing-mode: vertical-rl; }
 }
 
 @keyframes float {
