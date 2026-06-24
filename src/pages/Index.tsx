@@ -182,7 +182,7 @@ const Index = () => {
               Quem viveu, conta.
             </h2>
             <p className="text-muted-foreground mt-3 text-base">
-              Mensagens reais de participantes da caçada do ano passado.
+              Mensagens reais de participantes das edições anteriores da Caçada.
             </p>
           </div>
 
