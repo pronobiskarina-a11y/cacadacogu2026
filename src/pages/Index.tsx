@@ -171,44 +171,47 @@ const Index = () => {
       </section>
 
       {/* TESTIMONIALS */}
-      <section className="py-16 sm:py-20">
+      <section className="py-20 sm:py-28 bg-secondary/30 paper-grain">
         <div className="container">
-          <div className="max-w-2xl mb-10">
-            <p className="text-sienna text-sm uppercase tracking-widest mb-3 font-medium">Depoimentos</p>
-            <h2 className="font-display text-3xl sm:text-5xl font-bold text-forest-deep text-balance leading-tight">
-              Quem viveu, conta.
+          <div className="max-w-3xl mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-10 bg-sienna" />
+              <p className="font-stencil text-sienna text-sm tracking-[0.3em]">DEPOIMENTOS · EDIÇÕES ANTERIORES</p>
+            </div>
+            <h2 className="font-display text-4xl sm:text-6xl font-black text-forest-deep text-balance leading-[0.95]">
+              Quem viveu, <em className="text-sienna font-light">conta.</em>
             </h2>
-            <p className="text-muted-foreground mt-3 text-base">
-              Mensagens reais de participantes das edições anteriores da Caçada.
+            <p className="text-muted-foreground mt-4 text-lg">
+              Mensagens reais de participantes — recebidas via WhatsApp depois da vivência.
             </p>
           </div>
 
-          <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
-            <CarouselContent>
+          <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto">
+            <CarouselContent className="-ml-4">
               {[tn1, tn2, tn3, t1, t2, t3, t4, t5, t6].map((img, i) => (
-                <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
-                  <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
+                <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
+                  <div className="h-full p-3 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-elegant transition-smooth">
                     <img
                       src={img.url}
-                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos 2025`}
+                      alt={`Depoimento ${i + 1} da Caçada de Cogumelos`}
                       loading="lazy"
-                      className="w-full h-auto rounded-lg object-contain"
+                      className="w-full h-auto rounded-xl object-contain"
                     />
                   </div>
                 </CarouselItem>
               ))}
             </CarouselContent>
             <div className="hidden sm:block">
-              <CarouselPrevious className="-left-4 lg:-left-12" />
-              <CarouselNext className="-right-4 lg:-right-12" />
+              <CarouselPrevious className="-left-4 lg:-left-14" />
+              <CarouselNext className="-right-4 lg:-right-14" />
             </div>
           </Carousel>
 
-          <div className="text-center mt-10">
-            <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full px-8 h-14 text-base shadow-glow group">
+          <div className="text-center mt-12">
+            <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · R$ 497 ou 4x R$ 124,25
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                Quero minha vaga · R$ 497
+                <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
           </div>
