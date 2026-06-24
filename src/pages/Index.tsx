@@ -188,7 +188,7 @@ const Index = () => {
 
           <Carousel opts={{ align: "start", loop: true }} className="max-w-2xl mx-auto">
             <CarouselContent>
-              {[t1, t2, t3, t4, t5, t6].map((img, i) => (
+              {[tn1, tn2, tn3, t1, t2, t3, t4, t5, t6].map((img, i) => (
                 <CarouselItem key={i} className="basis-1/2 md:basis-1/3">
                   <div className="h-full p-1 rounded-lg bg-background border border-border hover:border-sienna/40 hover:shadow-soft transition-smooth overflow-hidden">
                     <img
