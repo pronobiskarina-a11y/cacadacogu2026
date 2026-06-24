@@ -252,62 +252,95 @@ const Index = () => {
 
 
       {/* GUIDE */}
-      <section className="py-24 sm:py-32">
+      <section className="py-24 sm:py-32 bg-secondary/30">
         <div className="container">
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
-                <img src={foraging} alt="Mãos colhendo cogumelos" className="w-full h-full object-cover" loading="lazy" width={1280} height={1280} />
+                <img src={jeffersonImg.url} alt="Jeferson Müller Timm, biólogo, micólogo e autor do livro Primavera Fungi" className="w-full h-full object-cover" loading="lazy" />
+              </div>
+              {/* Book overlay - bottom right */}
+              <div className="absolute -bottom-6 -right-4 sm:-right-8 w-40 sm:w-56 lg:w-64 drop-shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500">
+                <img src={bookImg.url} alt="Livro Primavera Fungi — Guia de Fungos do Sul do Brasil, por Jeferson Müller Timm" className="w-full h-auto" loading="lazy" />
+                <div className="absolute -top-2 -left-2 bg-sienna text-cream text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-lg">
+                  3ª Edição
+                </div>
               </div>
             </div>
 
             <div>
-              <p className="text-sienna text-sm uppercase tracking-widest mb-4 font-medium">Guiada por</p>
-              <h2 className="font-display text-5xl sm:text-6xl font-bold text-forest-deep mb-6 leading-tight">
-                Jefferson Timm
+              <p className="text-sienna text-sm uppercase tracking-widest mb-4 font-medium flex items-center gap-2">
+                <Award className="w-4 h-4" /> Guiada por
+              </p>
+              <h2 className="font-display text-5xl sm:text-6xl font-bold text-forest-deep mb-2 leading-tight">
+                Jeferson Müller Timm
               </h2>
+              <p className="text-sienna font-medium mb-6 text-lg">Biólogo, micólogo e autor</p>
+
+              <p className="text-lg text-muted-foreground leading-relaxed mb-5">
+                Referência nacional em fungos silvestres, Jeferson é autor do <strong className="text-forest-deep">Primavera Fungi — Guia de Fungos do Sul do Brasil</strong>, hoje em sua <strong>3ª edição revista e ampliada</strong>, com mais de 380 páginas e 170 espécies catalogadas. Uma obra inédita no Brasil.
+              </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Um dos maiores especialistas em cogumelos do Brasil, Jefferson conduz a vivência compartilhando o conhecimento profundo sobre identificação, cultivo e gastronomia dos fungos silvestres.
+                Já guiou expedições micológicas em festivais gastronômicos pelo país e foi destaque em publicações como a <em>Revista Piauí</em> e <em>GZH</em>. Sua vivência une rigor taxonômico, ecologia, cultivo e gastronomia — você sai do dia se sentindo, como já disseram, <em>"um micólogo de bolso"</em>.
               </p>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Sua paixão pela floresta e pelos cogumelos transforma cada caminhada em uma descoberta única.
-              </p>
+
+              <div className="grid grid-cols-3 gap-3 max-w-md">
+                {[
+                  { n: "170+", l: "Espécies catalogadas" },
+                  { n: "3ª", l: "Edição do livro" },
+                  { n: "15+", l: "Anos de pesquisa" },
+                ].map((s) => (
+                  <div key={s.l} className="text-center p-3 rounded-xl bg-background border border-border">
+                    <p className="font-display text-2xl font-bold text-sienna">{s.n}</p>
+                    <p className="text-xs text-muted-foreground leading-tight mt-1">{s.l}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FOOD */}
+      {/* FOOD / GASTRONOMY */}
       <section className="py-24 sm:py-32 bg-forest-deep text-cream relative overflow-hidden">
         <div className="container relative z-10">
-          <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
-            <div className="order-2 lg:order-1">
-              <p className="text-sienna-soft text-sm uppercase tracking-widest mb-4 font-medium">Alimentação inclusa</p>
-              <h2 className="font-display text-5xl sm:text-6xl font-bold mb-6 leading-tight text-balance">
-                Sabores agroecológicos do mundo dos cogumelos.
-              </h2>
-              <p className="text-lg text-cream/80 leading-relaxed mb-8">
-                Cardápio inspirado nos cogumelos e nos ingredientes da agrofloresta. Uma experiência gastronômica completa para fechar o dia com chave de ouro.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                {["Vegetariano", "Agroecológico", "Cogumelos frescos", "Ingredientes da floresta"].map((tag) => (
-                  <span key={tag} className="px-4 py-2 rounded-full border border-cream/20 text-sm text-cream/90">
-                    {tag}
-                  </span>
-                ))}
-              </div>
+          <div className="max-w-3xl mb-12">
+            <p className="text-sienna-soft text-sm uppercase tracking-widest mb-4 font-medium flex items-center gap-2">
+              <Utensils className="w-4 h-4" /> Da floresta para a mesa
+            </p>
+            <h2 className="font-display text-4xl sm:text-6xl font-bold mb-6 leading-tight text-balance">
+              Cace. Identifique. <em className="text-sienna-soft not-italic">Coma.</em>
+            </h2>
+            <p className="text-lg text-cream/85 leading-relaxed">
+              Esta não é apenas uma trilha — é uma <strong className="text-cream">experiência gastronômica completa</strong>. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com <strong className="text-cream">shiitake fresquinho cultivado aqui no sítio</strong> e um almoço agroecológico assinado pelo Chef Felipe (TEKOA).
+            </p>
+          </div>
+
+          <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
+            <div className="col-span-12 sm:col-span-7 aspect-[4/3] rounded-3xl overflow-hidden shadow-elegant">
+              <img src={mushroomLactarius.url} alt="Lactarius coletado fresco na floresta" className="w-full h-full object-cover" loading="lazy" />
             </div>
-            <div className="order-1 lg:order-2 grid grid-cols-2 gap-4">
-              <div className="aspect-square rounded-3xl overflow-hidden">
-                <img src={food1} alt="Prato preparado com cogumelos silvestres" className="w-full h-full object-cover" loading="lazy" width={1600} height={1600} />
-              </div>
-              <div className="aspect-square rounded-3xl overflow-hidden mt-12">
-                <img src={food2} alt="Refeição agroecológica da vivência" className="w-full h-full object-cover" loading="lazy" width={1600} height={1600} />
-              </div>
+            <div className="col-span-6 sm:col-span-5 aspect-square rounded-3xl overflow-hidden shadow-elegant sm:mt-12">
+              <img src={shiitakeImg.url} alt="Shiitake fresco cultivado no Sítio Pronobis" className="w-full h-full object-cover" loading="lazy" />
             </div>
+            <div className="col-span-6 sm:col-span-5 aspect-square rounded-3xl overflow-hidden shadow-elegant">
+              <img src={mushroomHand.url} alt="Cogumelos silvestres recém colhidos" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+            <div className="col-span-12 sm:col-span-7 aspect-[4/3] rounded-3xl overflow-hidden shadow-elegant sm:-mt-8">
+              <img src={mushroomBolete.url} alt="Boleto silvestre encontrado na Mata Atlântica" className="w-full h-full object-cover" loading="lazy" />
+            </div>
+          </div>
+
+          <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
+            {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço agroecológico Chef Felipe — TEKOA", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
+              <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
+                {tag}
+              </span>
+            ))}
           </div>
         </div>
       </section>
+
 
       {/* CTA */}
       <section className="py-24 sm:py-32">
