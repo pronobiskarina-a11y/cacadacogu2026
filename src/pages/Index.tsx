@@ -75,7 +75,7 @@ const Index = () => {
           <div className="max-w-3xl animate-fade-up">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-cream/15 backdrop-blur-sm border border-cream/20 text-cream text-sm sm:text-base mb-6">
               <Sparkles className="w-4 h-4 text-sienna-soft" />
-              <span>20 de Junho 2026 · Campo Largo/PR</span>
+              <span>Nova edição · 25 de Julho de 2026 · Campo Largo/PR</span>
             </div>
 
             <h1 className="font-display text-5xl sm:text-7xl lg:text-8xl font-bold text-cream leading-[0.95] text-balance mb-6">
@@ -83,7 +83,7 @@ const Index = () => {
             </h1>
 
             <p className="text-cream/90 text-lg sm:text-xl max-w-xl mb-8 leading-relaxed">
-              Um dia inteiro na Mata Atlântica caçando, identificando e provando cogumelos silvestres — guiado por um dos maiores especialistas do Brasil.
+              Um dia inteiro na Mata Atlântica caçando, identificando, cozinhando e <strong className="text-cream">degustando</strong> cogumelos silvestres — guiado por Jeferson Müller Timm, autor do livro <em>Primavera Fungi</em> e um dos maiores especialistas do Brasil.
             </p>
 
             <div className="mb-8 bg-cream/10 backdrop-blur-sm border border-cream/20 rounded-2xl p-5 max-w-md">
@@ -98,10 +98,7 @@ const Index = () => {
               </p>
               <div className="flex flex-wrap gap-2 mt-4">
                 <span className="px-4 py-2 rounded-full bg-sienna text-cream text-base font-bold uppercase tracking-wide animate-pulse">
-                  🔥 ÚLTIMAS VAGAS
-                </span>
-                <span className="px-3 py-1 rounded-full bg-cream/20 text-cream text-sm font-medium">
-                  Últimos dias para inscrição
+                  🔥 VAGAS LIMITADAS
                 </span>
               </div>
             </div>
