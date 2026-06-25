@@ -5,7 +5,7 @@ import heroForest from "@/assets/hero-forest.jpg";
 
 import mushroomBolete from "@/assets/new/mushroom-bolete.jpg.asset.json";
 import mushroomHand from "@/assets/new/mushroom-hand.jpg.asset.json";
-import mushroomLactarius from "@/assets/new/mushroom-lactarius.jpg.asset.json";
+import foodGardenImg from "@/assets/food-garden.jpg.asset.json";
 import shiitakeImg from "@/assets/new/shiitake.jpg.asset.json";
 import jeffersonImg from "@/assets/new/jefferson-timm.jpg.asset.json";
 import bookImg from "@/assets/new/primavera-fungi-book.png.asset.json";
