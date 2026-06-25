@@ -302,47 +302,47 @@ href="https://wa.me/5541995472974"
         </div>
       </section>
 
-      {/* FOOD / GASTRONOMY */}
-      <section className="py-24 sm:py-32 bg-forest-deep text-cream relative overflow-hidden">
-        <div className="container relative z-10">
-          <div className="max-w-3xl mb-12">
-            <p className="text-sienna-soft text-sm uppercase tracking-widest mb-4 font-medium flex items-center gap-2">
-              <Utensils className="w-4 h-4" /> Da floresta para a mesa
-            </p>
-            <h2 className="font-display text-4xl sm:text-6xl font-bold mb-6 leading-tight text-balance">
-              Cace. Identifique. <em className="text-sienna-soft not-italic">Coma.</em>
-            </h2>
-            <div className="space-y-4 text-lg text-cream/85 leading-relaxed">
-              <p>Esta não é apenas uma trilha, é uma <strong className="text-cream">experiência completa</strong>!</p>
-              <p>A gastronomia não poderia ficar de fora, claro que todo mundo que vem pra Caçada quer comer cogumelos, quer conhecer o sabor dos cogumelos comestíveis que coletamos.</p>
-              <p>Teremos um <strong className="text-cream">almoço orgânico do sítio</strong>, com muita diversidade e muuuuuito cogumelo. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com <strong className="text-cream">shiitake fresquinho cultivado aqui no sítio</strong>!</p>
-            </div>
-          </div>
+     {/* FOOD / GASTRONOMY */}
+<section className="py-24 sm:py-32 bg-forest-deep text-cream relative overflow-hidden">
+  <div className="container relative z-10">
+    <div className="max-w-3xl mb-12">
+      <p className="text-sienna-soft text-sm uppercase tracking-widest mb-4 font-medium flex items-center gap-2">
+        <Utensils className="w-4 h-4" /> Da floresta para a mesa
+      </p>
+      <h2 className="font-display text-4xl sm:text-6xl font-bold mb-6 leading-tight text-balance">
+        Cace. Identifique. <em className="text-sienna-soft not-italic">Coma.</em>
+      </h2>
+      <div className="space-y-4 text-lg text-cream/85 leading-relaxed">
+        <p>Esta não é apenas uma trilha, é uma <strong className="text-cream">experiência completa</strong>!</p>
+        <p>A gente sabe que todo mundo que vem pra Caçada quer degustar os cogumelos, principalmente os cogumelos comestíveis que coletarmos, então, é claro que a gastronomia precisa brilhar!</p>
+        <p>Teremos um <strong className="text-cream">almoço orgânico do sítio</strong>, com muita diversidade e muuuuuito cogumelo. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com o nosso <strong className="text-cream">shiitake fresquinho e cultivado na madeira, direto aqui do nosso sítio</strong>!</p>
+      </div>
+    </div>
 
-          <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
-            <div className="col-span-12 sm:col-span-7 aspect-[4/3] rounded-3xl overflow-hidden shadow-elegant">
-              <img src={foodGardenImg.url} alt="Almoço orgânico no sítio, chef apresentando pratos na floresta" className="w-full h-full object-contain" loading="lazy" />
-            </div>
-            <div className="col-span-6 sm:col-span-5 aspect-square rounded-3xl overflow-hidden shadow-elegant sm:mt-12">
-              <img src={shiitakeImg.url} alt="Shiitake fresco cultivado no Sítio Pronobis" className="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div className="col-span-6 sm:col-span-5 aspect-square rounded-3xl overflow-hidden shadow-elegant">
-              <img src={mushroomHand.url} alt="Cogumelos silvestres recém colhidos" className="w-full h-full object-cover" loading="lazy" />
-            </div>
-            <div className="col-span-12 sm:col-span-7 aspect-[4/3] rounded-3xl overflow-hidden shadow-elegant sm:-mt-8">
-              <img src={mushroomBolete.url} alt="Boleto silvestre encontrado na Mata Atlântica" className="w-full h-full object-cover" loading="lazy" />
-            </div>
-          </div>
+    <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
+      <div className="col-span-6 sm:col-span-4 aspect-square rounded-3xl overflow-hidden shadow-elegant">
+        <img src={foodGardenImg.url} alt="Almoço orgânico no sítio, chef apresentando pratos na floresta" className="w-full h-full object-cover object-bottom" loading="lazy" />
+      </div>
+      <div className="col-span-6 sm:col-span-4 aspect-square rounded-3xl overflow-hidden shadow-elegant">
+        <img src={shiitakeImg.url} alt="Shiitake fresco cultivado no Sítio Pronobis" className="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div className="col-span-12 sm:col-span-4 aspect-square rounded-3xl overflow-hidden shadow-elegant">
+        <img src={mushroomHand.url} alt="Cogumelos silvestres recém colhidos" className="w-full h-full object-cover" loading="lazy" />
+      </div>
+      <div className="col-span-12 aspect-[16/9] rounded-3xl overflow-hidden shadow-elegant">
+        <img src={mushroomBolete.url} alt="Boleto silvestre encontrado na Mata Atlântica" className="w-full h-full object-cover" loading="lazy" />
+      </div>
+    </div>
 
-          <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
-            {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
-              <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
-                {tag}
-              </span>
-            ))}
-          </div>
-        </div>
-      </section>
+    <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
+      {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
+        <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
+          {tag}
+        </span>
+      ))}
+    </div>
+  </div>
+</section>
 
 
       {/* CTA */}
