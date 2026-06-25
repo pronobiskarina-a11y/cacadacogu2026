@@ -28,7 +28,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* WHATSAPP FLOATING */}
       <a
-        href="https://wa.me/5541997411989"
+href="https://wa.me/5541995472974"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
