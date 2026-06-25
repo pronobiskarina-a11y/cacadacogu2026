@@ -104,7 +104,7 @@ const Index = () => {
             </h1>
 
             <p className="text-cream/90 text-lg sm:text-2xl max-w-2xl mb-10 leading-relaxed font-light">
-              Um dia inteiro <strong className="font-semibold">caçando, identificando, cozinhando e degustando</strong> cogumelos silvestres na floresta — guiado por <strong className="font-semibold text-cream">Jeferson Müller Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
+              Um dia inteiro <strong className="font-semibold">caçando, identificando e degustando</strong> cogumelos silvestres na floresta, guiado por <strong className="font-semibold text-cream">Jeferson Müller Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
             </p>
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
@@ -228,12 +228,13 @@ const Index = () => {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 max-w-4xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl">
             {[
               { icon: Compass, title: "Caminhada", desc: "Coleta e identificação na mata." },
               { icon: BookOpen, title: "Aprendizado", desc: "Com um dos maiores especialistas do Brasil." },
-              { icon: ChefHat, title: "Degustação", desc: "Cogumelos preparados na hora." },
-              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo de Shiitake." },
+              { icon: Utensils, title: "Almoço orgânico", desc: "Direto do sítio, com muito cogumelo." },
+              { icon: ChefHat, title: "Degustação", desc: "Cogumelos coletados preparados na hora." },
+              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo de Shiitake fresquinho." },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-background border border-border/60 hover:shadow-soft hover:border-sienna/40 transition-smooth">
                 <div className="shrink-0 w-9 h-9 rounded-lg bg-sienna/10 flex items-center justify-center text-sienna">
@@ -278,10 +279,10 @@ const Index = () => {
               <p className="text-sienna font-medium mb-6 text-lg">Biólogo, micólogo e autor</p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-                Referência nacional em fungos silvestres, Jeferson é autor do <strong className="text-forest-deep">Primavera Fungi — Guia de Fungos do Sul do Brasil</strong>, hoje em sua <strong>3ª edição revista e ampliada</strong>, com mais de 380 páginas e 170 espécies catalogadas. Uma obra inédita no Brasil.
+                Referência nacional em fungos silvestres, Jeferson é autor do <strong className="text-forest-deep">Primavera Fungi, Guia de Fungos do Sul do Brasil</strong>, hoje em sua <strong>3ª edição revista e ampliada</strong>, com mais de 380 páginas e 170 espécies catalogadas. Uma obra inédita no Brasil.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Já guiou expedições micológicas em festivais gastronômicos pelo país e foi destaque em publicações como a <em>Revista Piauí</em> e <em>GZH</em>. Sua vivência une rigor taxonômico, ecologia, cultivo e gastronomia — você sai do dia se sentindo, como já disseram, <em>"um micólogo de bolso"</em>.
+                Já guiou expedições micológicas em festivais gastronômicos pelo país e foi destaque em publicações como a <em>Revista Piauí</em> e <em>GZH</em>. Sua vivência une rigor taxonômico, ecologia, cultivo e gastronomia. Você sai do dia se sentindo, como já disseram, <em>"um micólogo de bolso"</em>.
               </p>
 
               <div className="grid grid-cols-3 gap-3 max-w-md">
@@ -311,9 +312,11 @@ const Index = () => {
             <h2 className="font-display text-4xl sm:text-6xl font-bold mb-6 leading-tight text-balance">
               Cace. Identifique. <em className="text-sienna-soft not-italic">Coma.</em>
             </h2>
-            <p className="text-lg text-cream/85 leading-relaxed">
-              Esta não é apenas uma trilha — é uma <strong className="text-cream">experiência gastronômica completa</strong>. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com <strong className="text-cream">shiitake fresquinho cultivado aqui no sítio</strong> e um almoço agroecológico assinado pelo Chef Felipe (TEKOA).
-            </p>
+            <div className="space-y-4 text-lg text-cream/85 leading-relaxed">
+              <p>Esta não é apenas uma trilha, é uma <strong className="text-cream">experiência completa</strong>!</p>
+              <p>A gastronomia não poderia ficar de fora, claro que todo mundo que vem pra Caçada quer comer cogumelos, quer conhecer o sabor dos cogumelos comestíveis que coletamos.</p>
+              <p>Teremos um <strong className="text-cream">almoço orgânico do sítio</strong>, com muita diversidade e muuuuuito cogumelo. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com <strong className="text-cream">shiitake fresquinho cultivado aqui no sítio</strong>!</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
@@ -332,7 +335,7 @@ const Index = () => {
           </div>
 
           <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
-            {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço agroecológico Chef Felipe — TEKOA", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
+            {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
               <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
                 {tag}
               </span>
