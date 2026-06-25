@@ -5,7 +5,7 @@ import heroForest from "@/assets/hero-forest.jpg";
 
 import mushroomBolete from "@/assets/new/mushroom-bolete.jpg.asset.json";
 import mushroomHand from "@/assets/new/mushroom-hand.jpg.asset.json";
-import mushroomLactarius from "@/assets/new/mushroom-lactarius.jpg.asset.json";
+import foodGardenImg from "@/assets/food-garden.jpg.asset.json";
 import shiitakeImg from "@/assets/new/shiitake.jpg.asset.json";
 import jeffersonImg from "@/assets/new/jefferson-timm.jpg.asset.json";
 import bookImg from "@/assets/new/primavera-fungi-book.png.asset.json";
@@ -21,14 +21,14 @@ import tn2 from "@/assets/new/testimonial-new-2.jpg.asset.json";
 import tn3 from "@/assets/new/testimonial-new-3.jpg.asset.json";
 
 
-const FORM_URL = "https://forms.gle/PretBL7rMkjdisvC7";
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeafJnwxX6NYadnXhMwM1tpoiuZ9YqJSwouuoOwnHojsVNjDw/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn_9JpZ6dCp-fVqrkQeJLDnwnrZnw4L9SkeqZksm1xjzV5pK8tn8qH_EYGcu8_aem_z3P9evHIRBtI6cwzQJkXnA";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       {/* WHATSAPP FLOATING */}
       <a
-        href="https://wa.me/5541997411989"
+href="https://wa.me/5541995472974"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
@@ -121,7 +121,7 @@ const Index = () => {
                   ✨ Descontos para <strong>duplas e grupos</strong>
                 </p>
                 <a
-                  href="https://wa.me/5541997411989?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20dupla%20ou%20grupo%20—%20pode%20me%20passar%20os%20valores?"
+                  href="https://wa.me/5541995472974?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20dupla%20ou%20grupo%20—%20pode%20me%20passar%20os%20valores?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366] text-white text-xs font-semibold hover:bg-[#1ebe57] transition-colors"
@@ -321,7 +321,7 @@ const Index = () => {
 
           <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
             <div className="col-span-12 sm:col-span-7 aspect-[4/3] rounded-3xl overflow-hidden shadow-elegant">
-              <img src={mushroomLactarius.url} alt="Lactarius coletado fresco na floresta" className="w-full h-full object-cover" loading="lazy" />
+              <img src={foodGardenImg.url} alt="Almoço orgânico no sítio, chef apresentando pratos na floresta" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div className="col-span-6 sm:col-span-5 aspect-square rounded-3xl overflow-hidden shadow-elegant sm:mt-12">
               <img src={shiitakeImg.url} alt="Shiitake fresco cultivado no Sítio Pronobis" className="w-full h-full object-cover" loading="lazy" />
@@ -365,7 +365,7 @@ const Index = () => {
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full px-10 h-14 text-base border-forest-deep/20 text-forest-deep hover:bg-forest-deep hover:text-cream">
-                <a href="https://wa.me/5541997411989" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+                <a href="https://wa.me/5541995472974" target="_blank" rel="noopener noreferrer">Fale conosco</a>
               </Button>
 
             </div>
