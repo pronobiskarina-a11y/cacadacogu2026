@@ -365,7 +365,7 @@ href="https://wa.me/5541995472974"
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-full px-10 h-14 text-base border-forest-deep/20 text-forest-deep hover:bg-forest-deep hover:text-cream">
-                <a href="https://wa.me/5541997411989" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+                <a href="https://wa.me/5541995472974" target="_blank" rel="noopener noreferrer">Fale conosco</a>
               </Button>
 
             </div>
