@@ -3,7 +3,6 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroForest from "@/assets/hero-forest.jpg";
 
-import mushroomBolete from "@/assets/new/mushroom-bolete.jpg.asset.json";
 import mushroomHand from "@/assets/new/mushroom-hand.jpg.asset.json";
 import foodGardenImg from "@/assets/food-garden.jpg.asset.json";
 import shiitakeImg from "@/assets/new/shiitake.jpg.asset.json";
