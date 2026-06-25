@@ -328,9 +328,6 @@ href="https://wa.me/5541995472974"
       <div className="col-span-12 sm:col-span-4 aspect-square rounded-3xl overflow-hidden shadow-elegant">
         <img src={mushroomHand.url} alt="Cogumelos silvestres recém colhidos" className="w-full h-full object-cover" loading="lazy" />
       </div>
-      <div className="col-span-12 aspect-[16/9] rounded-3xl overflow-hidden shadow-elegant">
-        <img src={mushroomBolete.url} alt="Boleto silvestre encontrado na Mata Atlântica" className="w-full h-full object-cover" loading="lazy" />
-      </div>
     </div>
 
     <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
