@@ -279,10 +279,10 @@ const Index = () => {
               <p className="text-sienna font-medium mb-6 text-lg">Biólogo, micólogo e autor</p>
 
               <p className="text-lg text-muted-foreground leading-relaxed mb-5">
-                Referência nacional em fungos silvestres, Jeferson é autor do <strong className="text-forest-deep">Primavera Fungi — Guia de Fungos do Sul do Brasil</strong>, hoje em sua <strong>3ª edição revista e ampliada</strong>, com mais de 380 páginas e 170 espécies catalogadas. Uma obra inédita no Brasil.
+                Referência nacional em fungos silvestres, Jeferson é autor do <strong className="text-forest-deep">Primavera Fungi, Guia de Fungos do Sul do Brasil</strong>, hoje em sua <strong>3ª edição revista e ampliada</strong>, com mais de 380 páginas e 170 espécies catalogadas. Uma obra inédita no Brasil.
               </p>
               <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-                Já guiou expedições micológicas em festivais gastronômicos pelo país e foi destaque em publicações como a <em>Revista Piauí</em> e <em>GZH</em>. Sua vivência une rigor taxonômico, ecologia, cultivo e gastronomia — você sai do dia se sentindo, como já disseram, <em>"um micólogo de bolso"</em>.
+                Já guiou expedições micológicas em festivais gastronômicos pelo país e foi destaque em publicações como a <em>Revista Piauí</em> e <em>GZH</em>. Sua vivência une rigor taxonômico, ecologia, cultivo e gastronomia. Você sai do dia se sentindo, como já disseram, <em>"um micólogo de bolso"</em>.
               </p>
 
               <div className="grid grid-cols-3 gap-3 max-w-md">
