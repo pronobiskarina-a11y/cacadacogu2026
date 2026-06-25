@@ -312,9 +312,11 @@ const Index = () => {
             <h2 className="font-display text-4xl sm:text-6xl font-bold mb-6 leading-tight text-balance">
               Cace. Identifique. <em className="text-sienna-soft not-italic">Coma.</em>
             </h2>
-            <p className="text-lg text-cream/85 leading-relaxed">
-              Esta não é apenas uma trilha — é uma <strong className="text-cream">experiência gastronômica completa</strong>. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com <strong className="text-cream">shiitake fresquinho cultivado aqui no sítio</strong> e um almoço agroecológico assinado pelo Chef Felipe (TEKOA).
-            </p>
+            <div className="space-y-4 text-lg text-cream/85 leading-relaxed">
+              <p>Esta não é apenas uma trilha, é uma <strong className="text-cream">experiência completa</strong>!</p>
+              <p>A gastronomia não poderia ficar de fora, claro que todo mundo que vem pra Caçada quer comer cogumelos, quer conhecer o sabor dos cogumelos comestíveis que coletamos.</p>
+              <p>Teremos um <strong className="text-cream">almoço orgânico do sítio</strong>, com muita diversidade e muuuuuito cogumelo. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com <strong className="text-cream">shiitake fresquinho cultivado aqui no sítio</strong>!</p>
+            </div>
           </div>
 
           <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
