@@ -335,7 +335,7 @@ const Index = () => {
           </div>
 
           <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
-            {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço agroecológico Chef Felipe — TEKOA", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
+            {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
               <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
                 {tag}
               </span>
