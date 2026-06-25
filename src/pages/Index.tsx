@@ -321,7 +321,7 @@ href="https://wa.me/5541995472974"
 
           <div className="grid grid-cols-12 gap-3 sm:gap-4 max-w-6xl">
             <div className="col-span-12 sm:col-span-7 aspect-[4/3] rounded-3xl overflow-hidden shadow-elegant">
-              <img src={mushroomLactarius.url} alt="Lactarius coletado fresco na floresta" className="w-full h-full object-cover" loading="lazy" />
+              <img src={foodGardenImg.url} alt="Almoço orgânico no sítio, chef apresentando pratos na floresta" className="w-full h-full object-cover" loading="lazy" />
             </div>
             <div className="col-span-6 sm:col-span-5 aspect-square rounded-3xl overflow-hidden shadow-elegant sm:mt-12">
               <img src={shiitakeImg.url} alt="Shiitake fresco cultivado no Sítio Pronobis" className="w-full h-full object-cover" loading="lazy" />
