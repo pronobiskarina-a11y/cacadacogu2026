@@ -21,7 +21,7 @@ import tn2 from "@/assets/new/testimonial-new-2.jpg.asset.json";
 import tn3 from "@/assets/new/testimonial-new-3.jpg.asset.json";
 
 
-const FORM_URL = "https://forms.gle/PretBL7rMkjdisvC7";
+const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeafJnwxX6NYadnXhMwM1tpoiuZ9YqJSwouuoOwnHojsVNjDw/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn_9JpZ6dCp-fVqrkQeJLDnwnrZnw4L9SkeqZksm1xjzV5pK8tn8qH_EYGcu8_aem_z3P9evHIRBtI6cwzQJkXnA";
 
 const Index = () => {
   return (
