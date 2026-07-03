@@ -341,10 +341,7 @@ const Index = () => {
               </div>
               {/* Book overlay - bottom right */}
               <div className="absolute -bottom-6 -right-4 sm:-right-8 w-40 sm:w-56 lg:w-64 drop-shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500">
-                <img src={bookImg.url} alt="Livro Primavera Fungi — Guia de Fungos do Sul do Brasil, por Jeferson Müller Timm" className="w-full h-auto" loading="lazy" />
-                <div className="absolute -top-2 -left-2 bg-sienna text-cream text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-lg">
-                  3ª Edição
-                </div>
+                <img src={bookImg.url} alt="Livro Primavera Fungi — Guia de Fungos do Sul do Brasil, por Jeferson Timm" className="w-full h-auto" loading="lazy" />
               </div>
             </div>
 
@@ -353,7 +350,7 @@ const Index = () => {
                 <Award className="w-4 h-4" /> Guiada por
               </p>
               <h2 className="font-display text-5xl sm:text-6xl font-bold text-forest-deep mb-2 leading-tight">
-                Jeferson Müller Timm
+                Jeferson Timm
               </h2>
               <p className="text-sienna font-medium mb-6 text-lg">Biólogo, micólogo e autor</p>
 
@@ -471,7 +468,7 @@ const Index = () => {
               <img src={mHandYellow.url} alt="Cogumelos silvestres coloridos coletados na mão" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
             <figure className="col-span-3 row-span-1 rounded-3xl overflow-hidden shadow-elegant relative group">
-              <img src={mParticipant.url} alt="Participante da Caçada segurando um cogumelo silvestre encontrado na trilha" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <img src={mParticipant.url} alt="Participante da Caçada segurando um cogumelo silvestre encontrado na trilha" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
               <figcaption className="absolute bottom-3 left-4 text-cream font-stencil text-[10px] tracking-[0.25em] drop-shadow-lg">SUAS DESCOBERTAS</figcaption>
             </figure>
           </div>
