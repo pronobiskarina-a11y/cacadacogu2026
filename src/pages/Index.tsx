@@ -110,7 +110,7 @@ const Index = () => {
             </h1>
 
             <p className="text-cream/90 text-lg sm:text-2xl max-w-2xl mb-10 leading-relaxed font-light">
-              Um dia inteiro <strong className="font-semibold">caçando, identificando e degustando</strong> cogumelos silvestres na floresta, guiado por <strong className="font-semibold text-cream">Jeferson Müller Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
+              Um dia inteiro <strong className="font-semibold">caçando, identificando e degustando</strong> cogumelos silvestres na floresta, guiado por <strong className="font-semibold text-cream">Jeferson Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
             </p>
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
