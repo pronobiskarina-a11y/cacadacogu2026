@@ -80,9 +80,8 @@ const Index = () => {
         {/* Vertical edition rail */}
         <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 flex-col items-center gap-4 text-cream/70">
           <span className="font-stencil text-xs tracking-[0.3em]">EDIÇÃO</span>
-          <span className="font-display text-5xl font-bold text-sienna-soft leading-none">04</span>
           <div className="w-px h-24 bg-cream/30" />
-          <span className="vertical-rl font-stencil text-xs tracking-[0.3em]">JULHO · 2026</span>
+          <span className="vertical-rl font-stencil text-sm tracking-[0.3em]">JULHO · 2026</span>
         </div>
 
         {/* Corner date stamp */}
