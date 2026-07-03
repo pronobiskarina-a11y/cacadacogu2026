@@ -209,7 +209,7 @@ href="https://wa.me/5541995472974"
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · R$ 497
+                Quero minha vaga · 1º lote R$ 437
                 <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
