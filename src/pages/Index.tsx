@@ -227,13 +227,14 @@ href="https://wa.me/5541995472974"
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl">
             {[
-              { icon: Compass, title: "Caminhada", desc: "Coleta e identificação na mata." },
+              { icon: Compass, title: "Caminhada guiada", desc: "Coleta e identificação na mata." },
               { icon: BookOpen, title: "Aprendizado", desc: "Com um dos maiores especialistas do Brasil." },
-              { icon: Utensils, title: "Almoço orgânico", desc: "Direto do sítio, com muito cogumelo." },
-              { icon: ChefHat, title: "Degustação", desc: "Cogumelos coletados preparados na hora." },
-              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo de Shiitake fresquinho." },
+              { icon: Sprout, title: "Cultivo agroflorestal", desc: "Visita ao cultivo de Shiitake fresquinho." },
+              { icon: ChefHat, title: "Almoço do Chef Felipe", desc: "Cozinha assinada do premiado Tekoa." },
+              { icon: Wine, title: "Vinho harmonizado", desc: "Vinho do território acompanhando o almoço." },
+              { icon: Users, title: "Comunidade no WhatsApp", desc: "Grupo exclusivo com especialistas depois da caçada." },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-background border border-border/60 hover:shadow-soft hover:border-sienna/40 transition-smooth">
                 <div className="shrink-0 w-9 h-9 rounded-lg bg-sienna/10 flex items-center justify-center text-sienna">
