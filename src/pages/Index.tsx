@@ -80,9 +80,8 @@ const Index = () => {
         {/* Vertical edition rail */}
         <div className="hidden lg:flex absolute left-6 top-1/2 -translate-y-1/2 z-20 flex-col items-center gap-4 text-cream/70">
           <span className="font-stencil text-xs tracking-[0.3em]">EDIÇÃO</span>
-          <span className="font-display text-5xl font-bold text-sienna-soft leading-none">04</span>
           <div className="w-px h-24 bg-cream/30" />
-          <span className="vertical-rl font-stencil text-xs tracking-[0.3em]">JULHO · 2026</span>
+          <span className="vertical-rl font-stencil text-sm tracking-[0.3em]">JULHO · 2026</span>
         </div>
 
         {/* Corner date stamp */}
@@ -90,7 +89,7 @@ const Index = () => {
           <div className="border-2 border-sienna-soft/80 rounded-full w-28 h-28 sm:w-36 sm:h-36 flex flex-col items-center justify-center text-center text-cream backdrop-blur-sm bg-forest-deep/30">
             <span className="font-stencil text-[10px] sm:text-xs tracking-[0.2em] text-sienna-soft">SÁBADO</span>
             <span className="font-display text-3xl sm:text-5xl font-black leading-none my-1">25</span>
-            <span className="font-stencil text-[10px] sm:text-xs tracking-[0.2em]">JUL · 2026</span>
+            <span className="font-stencil text-sm sm:text-base tracking-[0.2em]">JUL · 2026</span>
           </div>
         </div>
 
@@ -111,7 +110,7 @@ const Index = () => {
             </h1>
 
             <p className="text-cream/90 text-lg sm:text-2xl max-w-2xl mb-10 leading-relaxed font-light">
-              Um dia inteiro <strong className="font-semibold">caçando, identificando e degustando</strong> cogumelos silvestres na floresta, guiado por <strong className="font-semibold text-cream">Jeferson Müller Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
+              Um dia inteiro <strong className="font-semibold">caçando, identificando e degustando</strong> cogumelos silvestres na floresta, guiado por <strong className="font-semibold text-cream">Jeferson Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
             </p>
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
@@ -169,9 +168,12 @@ const Index = () => {
               { lote: "2º LOTE", price: "R$467", until: "até 14/Jul", highlight: false },
               { lote: "3º LOTE", price: "R$497", until: "até esgotar", highlight: false },
             ].map((l) => (
-              <div
+              <a
                 key={l.lote}
-                className={`relative p-6 rounded-2xl border transition-smooth ${
+                href={FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`relative p-6 rounded-2xl border transition-smooth block ${
                   l.highlight
                     ? "bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
                     : "bg-cream/5 border-cream/15"
@@ -193,7 +195,7 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </a>
             ))}
           </div>
 
@@ -264,7 +266,7 @@ const Index = () => {
 
           <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto">
             <CarouselContent className="-ml-4">
-              {[tn1, tn2, tn3, t1, t2, t3, t4, t5, t6].map((img, i) => (
+              {[t1, t5, t3, t2, t4, t6, tn2, tn1, tn3].map((img, i) => (
                 <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="h-full p-3 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-elegant transition-smooth">
                     <img
@@ -335,14 +337,11 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
-                <img src={jeffersonImg.url} alt="Jeferson Müller Timm, biólogo, micólogo e autor do livro Primavera Fungi" className="w-full h-full object-cover" loading="lazy" />
+                <img src={jeffersonImg.url} alt="Jeferson Timm, biólogo, micólogo e autor do livro Primavera Fungi" className="w-full h-full object-cover" loading="lazy" />
               </div>
               {/* Book overlay - bottom right */}
               <div className="absolute -bottom-6 -right-4 sm:-right-8 w-40 sm:w-56 lg:w-64 drop-shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500">
-                <img src={bookImg.url} alt="Livro Primavera Fungi — Guia de Fungos do Sul do Brasil, por Jeferson Müller Timm" className="w-full h-auto" loading="lazy" />
-                <div className="absolute -top-2 -left-2 bg-sienna text-cream text-[10px] sm:text-xs font-bold uppercase tracking-wider px-2 py-1 rounded-full shadow-lg">
-                  3ª Edição
-                </div>
+                <img src={bookImg.url} alt="Livro Primavera Fungi — Guia de Fungos do Sul do Brasil, por Jeferson Timm" className="w-full h-auto" loading="lazy" />
               </div>
             </div>
 
@@ -351,7 +350,7 @@ const Index = () => {
                 <Award className="w-4 h-4" /> Guiada por
               </p>
               <h2 className="font-display text-5xl sm:text-6xl font-bold text-forest-deep mb-2 leading-tight">
-                Jeferson Müller Timm
+                Jeferson Timm
               </h2>
               <p className="text-sienna font-medium mb-6 text-lg">Biólogo, micólogo e autor</p>
 
@@ -469,7 +468,7 @@ const Index = () => {
               <img src={mHandYellow.url} alt="Cogumelos silvestres coloridos coletados na mão" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
             </figure>
             <figure className="col-span-3 row-span-1 rounded-3xl overflow-hidden shadow-elegant relative group">
-              <img src={mParticipant.url} alt="Participante da Caçada segurando um cogumelo silvestre encontrado na trilha" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <img src={mParticipant.url} alt="Participante da Caçada segurando um cogumelo silvestre encontrado na trilha" className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-105" loading="lazy" />
               <figcaption className="absolute bottom-3 left-4 text-cream font-stencil text-[10px] tracking-[0.25em] drop-shadow-lg">SUAS DESCOBERTAS</figcaption>
             </figure>
           </div>
