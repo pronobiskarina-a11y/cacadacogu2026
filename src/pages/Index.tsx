@@ -89,7 +89,7 @@ const Index = () => {
           <div className="border-2 border-sienna-soft/80 rounded-full w-28 h-28 sm:w-36 sm:h-36 flex flex-col items-center justify-center text-center text-cream backdrop-blur-sm bg-forest-deep/30">
             <span className="font-stencil text-[10px] sm:text-xs tracking-[0.2em] text-sienna-soft">SÁBADO</span>
             <span className="font-display text-3xl sm:text-5xl font-black leading-none my-1">25</span>
-            <span className="font-stencil text-[10px] sm:text-xs tracking-[0.2em]">JUL · 2026</span>
+            <span className="font-stencil text-sm sm:text-base tracking-[0.2em]">JUL · 2026</span>
           </div>
         </div>
 
