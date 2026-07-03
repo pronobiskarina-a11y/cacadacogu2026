@@ -331,7 +331,7 @@ href="https://wa.me/5541995472974"
     </div>
 
     <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
-      {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
+      {["Vinho do território harmonizado", "Chef Felipe · Tekoa", "Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta"].map((tag) => (
         <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
           {tag}
         </span>
