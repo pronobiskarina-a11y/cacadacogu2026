@@ -313,8 +313,8 @@ href="https://wa.me/5541995472974"
       </h2>
       <div className="space-y-4 text-lg text-cream/85 leading-relaxed">
         <p>Esta não é apenas uma trilha, é uma <strong className="text-cream">experiência completa</strong>!</p>
-        <p>A gente sabe que todo mundo que vem pra Caçada quer degustar os cogumelos, principalmente os cogumelos comestíveis que coletarmos, então, é claro que a gastronomia precisa brilhar!</p>
-        <p>Teremos um <strong className="text-cream">almoço orgânico do sítio</strong>, com muita diversidade e muuuuuito cogumelo. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com o nosso <strong className="text-cream">shiitake fresquinho e cultivado na madeira, direto aqui do nosso sítio</strong>!</p>
+        <p>🍷 <strong className="text-cream">Da floresta à mesa.</strong> Aprenda a identificar cogumelos silvestres com Jeferson Timm, conheça o cultivo agroflorestal de shiitake e desfrute de um <strong className="text-cream">almoço cogumeludo harmonizado com um bom vinho do território</strong>, preparado pelo <strong className="text-cream">Chef Felipe, do premiado Tekoa</strong>.</p>
+        <p>Teremos um almoço orgânico do sítio com muita diversidade e muuuuuito cogumelo. Os comestíveis que você coletar na mata serão preparados na hora, junto com o nosso <strong className="text-cream">shiitake fresquinho, cultivado na madeira direto aqui do sítio</strong>.</p>
       </div>
     </div>
 
