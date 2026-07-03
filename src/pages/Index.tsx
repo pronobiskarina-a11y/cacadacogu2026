@@ -168,9 +168,12 @@ const Index = () => {
               { lote: "2º LOTE", price: "R$467", until: "até 14/Jul", highlight: false },
               { lote: "3º LOTE", price: "R$497", until: "até esgotar", highlight: false },
             ].map((l) => (
-              <div
+              <a
                 key={l.lote}
-                className={`relative p-6 rounded-2xl border transition-smooth ${
+                href={FORM_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`relative p-6 rounded-2xl border transition-smooth block ${
                   l.highlight
                     ? "bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
                     : "bg-cream/5 border-cream/15"
@@ -192,7 +195,7 @@ const Index = () => {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </a>
             ))}
           </div>
 
@@ -263,7 +266,7 @@ const Index = () => {
 
           <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto">
             <CarouselContent className="-ml-4">
-              {[tn1, tn2, tn3, t1, t2, t3, t4, t5, t6].map((img, i) => (
+              {[t1, t5, t3, t2, t4, t6, tn2, tn1, tn3].map((img, i) => (
                 <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="h-full p-3 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-elegant transition-smooth">
                     <img
@@ -334,7 +337,7 @@ const Index = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center max-w-6xl mx-auto">
             <div className="relative">
               <div className="aspect-[4/5] rounded-3xl overflow-hidden shadow-elegant">
-                <img src={jeffersonImg.url} alt="Jeferson Müller Timm, biólogo, micólogo e autor do livro Primavera Fungi" className="w-full h-full object-cover" loading="lazy" />
+                <img src={jeffersonImg.url} alt="Jeferson Timm, biólogo, micólogo e autor do livro Primavera Fungi" className="w-full h-full object-cover" loading="lazy" />
               </div>
               {/* Book overlay - bottom right */}
               <div className="absolute -bottom-6 -right-4 sm:-right-8 w-40 sm:w-56 lg:w-64 drop-shadow-2xl rotate-6 hover:rotate-0 transition-transform duration-500">
