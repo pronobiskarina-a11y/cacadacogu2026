@@ -108,19 +108,19 @@ href="https://wa.me/5541995472974"
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
               <div className="border-l-4 border-sienna pl-5">
-                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">INVESTIMENTO</p>
-                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$497</p>
+                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">1º LOTE · ATÉ 07/JUL 🔥</p>
+                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$437</p>
                 <p className="text-cream/80 text-sm mt-2">
-                  ou <strong className="text-cream">4x R$ 124,25</strong> · almoço incluso
+                  ou <strong className="text-cream">4x sem juros</strong> · almoço + vinho inclusos
                 </p>
               </div>
 
               <div className="bg-cream/5 backdrop-blur-md border border-cream/15 rounded-2xl p-4">
                 <p className="text-cream text-sm font-medium leading-snug mb-2">
-                  ✨ Descontos para <strong>duplas e grupos</strong>
+                  ✨ Casais, duplas e grupos com <strong>descontos especiais</strong>
                 </p>
                 <a
-                  href="https://wa.me/5541995472974?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20dupla%20ou%20grupo%20—%20pode%20me%20passar%20os%20valores?"
+                  href="https://wa.me/5541995472974?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20casais%2C%20duplas%20ou%20grupos.%20Pode%20me%20passar%20os%20valores?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366] text-white text-xs font-semibold hover:bg-[#1ebe57] transition-colors"
