@@ -266,7 +266,7 @@ const Index = () => {
 
           <Carousel opts={{ align: "start", loop: true }} className="max-w-6xl mx-auto">
             <CarouselContent className="-ml-4">
-              {[t1, t5, t3, t2, t4, t6, tn2, tn1, tn3].map((img, i) => (
+              {[t3, t2, t1, t5, t4, t6, tn2, tn1, tn3].map((img, i) => (
                 <CarouselItem key={i} className="pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                   <div className="h-full p-3 rounded-2xl bg-background border border-border hover:border-sienna/40 hover:shadow-elegant transition-smooth">
                     <img
