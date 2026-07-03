@@ -350,6 +350,43 @@ href="https://wa.me/5541995472974"
 </section>
 
 
+      {/* MOMENTS GALLERY */}
+      <section className="py-20 sm:py-28 bg-background paper-grain">
+        <div className="container">
+          <div className="max-w-3xl mb-12">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="h-px w-10 bg-sienna" />
+              <p className="font-stencil text-sienna text-sm tracking-[0.3em]">MOMENTOS · EDIÇÕES ANTERIORES</p>
+            </div>
+            <h2 className="font-display text-4xl sm:text-6xl font-black text-forest-deep text-balance leading-[0.95]">
+              A floresta <em className="text-sienna font-light">acontece</em> assim.
+            </h2>
+            <p className="text-muted-foreground mt-4 text-lg">
+              Sozinho, em dupla, com a família ou com a criançada. Cada edição vira memória.
+            </p>
+          </div>
+
+          {/* Editorial bento mosaic */}
+          <div className="grid grid-cols-6 grid-rows-2 gap-3 sm:gap-4 max-w-6xl h-[520px] sm:h-[640px]">
+            <figure className="col-span-3 row-span-2 rounded-3xl overflow-hidden shadow-elegant relative group">
+              <img src={mMomBasket.url} alt="Mãe e filho identificando cogumelos coletados numa caçada em família" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <figcaption className="absolute bottom-4 left-4 right-4 text-cream font-stencil text-xs tracking-[0.25em] drop-shadow-lg">EM FAMÍLIA</figcaption>
+            </figure>
+            <figure className="col-span-3 sm:col-span-2 row-span-1 rounded-3xl overflow-hidden shadow-elegant relative group">
+              <img src={mCouple.url} alt="Casal agachado observando cogumelos silvestres na mata" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <figcaption className="absolute bottom-3 left-4 text-cream font-stencil text-[10px] tracking-[0.25em] drop-shadow-lg">EM DUPLA</figcaption>
+            </figure>
+            <figure className="hidden sm:block col-span-1 row-span-1 rounded-3xl overflow-hidden shadow-elegant relative group">
+              <img src={mHandYellow.url} alt="Cogumelos silvestres coloridos coletados na mão" className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+            </figure>
+            <figure className="col-span-3 row-span-1 rounded-3xl overflow-hidden shadow-elegant relative group">
+              <img src={mParticipant.url} alt="Participante da Caçada segurando um cogumelo silvestre encontrado na trilha" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
+              <figcaption className="absolute bottom-3 left-4 text-cream font-stencil text-[10px] tracking-[0.25em] drop-shadow-lg">SUAS DESCOBERTAS</figcaption>
+            </figure>
+          </div>
+        </div>
+      </section>
+
       {/* COMMUNITY AFTER */}
       <section className="py-20 sm:py-28 bg-secondary/40">
         <div className="container">
