@@ -1,4 +1,4 @@
-import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout, Award, Utensils } from "lucide-react";
+import { CalendarDays, Clock3, MapPin, Leaf, Sparkles, ArrowRight, Compass, BookOpen, ChefHat, Sprout, Award, Utensils, Wine, Users, MessageCircle, CheckCircle2 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import heroForest from "@/assets/hero-forest.jpg";
@@ -108,19 +108,19 @@ href="https://wa.me/5541995472974"
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
               <div className="border-l-4 border-sienna pl-5">
-                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">INVESTIMENTO</p>
-                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$497</p>
+                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">1º LOTE · ATÉ 07/JUL 🔥</p>
+                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$437</p>
                 <p className="text-cream/80 text-sm mt-2">
-                  ou <strong className="text-cream">4x R$ 124,25</strong> · almoço incluso
+                  ou <strong className="text-cream">4x sem juros</strong> · almoço + vinho inclusos
                 </p>
               </div>
 
               <div className="bg-cream/5 backdrop-blur-md border border-cream/15 rounded-2xl p-4">
                 <p className="text-cream text-sm font-medium leading-snug mb-2">
-                  ✨ Descontos para <strong>duplas e grupos</strong>
+                  ✨ Casais, duplas e grupos com <strong>descontos especiais</strong>
                 </p>
                 <a
-                  href="https://wa.me/5541995472974?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20dupla%20ou%20grupo%20—%20pode%20me%20passar%20os%20valores?"
+                  href="https://wa.me/5541995472974?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20casais%2C%20duplas%20ou%20grupos.%20Pode%20me%20passar%20os%20valores?"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366] text-white text-xs font-semibold hover:bg-[#1ebe57] transition-colors"
@@ -209,7 +209,7 @@ href="https://wa.me/5541995472974"
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · R$ 497
+                Quero minha vaga · 1º lote R$ 437
                 <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -227,13 +227,14 @@ href="https://wa.me/5541995472974"
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-3 max-w-5xl">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 max-w-5xl">
             {[
-              { icon: Compass, title: "Caminhada", desc: "Coleta e identificação na mata." },
+              { icon: Compass, title: "Caminhada guiada", desc: "Coleta e identificação na mata." },
               { icon: BookOpen, title: "Aprendizado", desc: "Com um dos maiores especialistas do Brasil." },
-              { icon: Utensils, title: "Almoço orgânico", desc: "Direto do sítio, com muito cogumelo." },
-              { icon: ChefHat, title: "Degustação", desc: "Cogumelos coletados preparados na hora." },
-              { icon: Sprout, title: "Cultivo", desc: "Visita ao cultivo de Shiitake fresquinho." },
+              { icon: Sprout, title: "Cultivo agroflorestal", desc: "Visita ao cultivo de Shiitake fresquinho." },
+              { icon: ChefHat, title: "Almoço do Chef Felipe", desc: "Cozinha assinada do premiado Tekoa." },
+              { icon: Wine, title: "Vinho harmonizado", desc: "Vinho do território acompanhando o almoço." },
+              { icon: Users, title: "Comunidade no WhatsApp", desc: "Grupo exclusivo com especialistas depois da caçada." },
             ].map((item, i) => (
               <div key={i} className="flex items-center gap-3 p-3 rounded-xl bg-background border border-border/60 hover:shadow-soft hover:border-sienna/40 transition-smooth">
                 <div className="shrink-0 w-9 h-9 rounded-lg bg-sienna/10 flex items-center justify-center text-sienna">
@@ -313,8 +314,8 @@ href="https://wa.me/5541995472974"
       </h2>
       <div className="space-y-4 text-lg text-cream/85 leading-relaxed">
         <p>Esta não é apenas uma trilha, é uma <strong className="text-cream">experiência completa</strong>!</p>
-        <p>A gente sabe que todo mundo que vem pra Caçada quer degustar os cogumelos, principalmente os cogumelos comestíveis que coletarmos, então, é claro que a gastronomia precisa brilhar!</p>
-        <p>Teremos um <strong className="text-cream">almoço orgânico do sítio</strong>, com muita diversidade e muuuuuito cogumelo. Os cogumelos comestíveis que você coletar na mata serão preparados na hora, junto com o nosso <strong className="text-cream">shiitake fresquinho e cultivado na madeira, direto aqui do nosso sítio</strong>!</p>
+        <p>🍷 <strong className="text-cream">Da floresta à mesa.</strong> Aprenda a identificar cogumelos silvestres com Jeferson Timm, conheça o cultivo agroflorestal de shiitake e desfrute de um <strong className="text-cream">almoço cogumeludo harmonizado com um bom vinho do território</strong>, preparado pelo <strong className="text-cream">Chef Felipe, do premiado Tekoa</strong>.</p>
+        <p>Teremos um almoço orgânico do sítio com muita diversidade e muuuuuito cogumelo. Os comestíveis que você coletar na mata serão preparados na hora, junto com o nosso <strong className="text-cream">shiitake fresquinho, cultivado na madeira direto aqui do sítio</strong>.</p>
       </div>
     </div>
 
@@ -331,7 +332,7 @@ href="https://wa.me/5541995472974"
     </div>
 
     <div className="flex flex-wrap gap-3 mt-10 max-w-4xl">
-      {["Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta", "Degustação guiada"].map((tag) => (
+      {["Vinho do território harmonizado", "Chef Felipe · Tekoa", "Shiitake fresco do sítio", "Cogumelos silvestres preparados na hora", "Almoço orgânico do sítio", "Ingredientes da agrofloresta"].map((tag) => (
         <span key={tag} className="px-4 py-2 rounded-full border border-cream/25 bg-cream/5 text-sm text-cream/90">
           {tag}
         </span>
@@ -340,6 +341,95 @@ href="https://wa.me/5541995472974"
   </div>
 </section>
 
+
+      {/* COMMUNITY AFTER */}
+      <section className="py-20 sm:py-28 bg-secondary/40">
+        <div className="container">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-[auto_1fr] gap-8 items-start p-8 sm:p-12 rounded-3xl bg-background border border-border shadow-soft">
+            <div className="w-20 h-20 rounded-2xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
+              <MessageCircle className="w-10 h-10 text-[#25D366]" strokeWidth={1.75} />
+            </div>
+            <div>
+              <p className="font-stencil text-sienna text-xs tracking-[0.3em] mb-3">A EXPERIÊNCIA CONTINUA</p>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-forest-deep leading-tight mb-4">
+                Depois da caçada, você entra para um <em className="text-sienna not-italic">grupo exclusivo</em>.
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Um grupo no WhatsApp com <strong className="text-forest-deep">alguns dos maiores especialistas em identificação de cogumelos do Brasil</strong> e outros participantes. Um espaço para trocar experiências, compartilhar descobertas e seguir aprendendo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* INVESTMENT / LOTES */}
+      <section id="investimento" className="py-20 sm:py-28 bg-forest-deep text-cream">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-12">
+            <p className="font-stencil text-sienna-soft text-sm tracking-[0.3em] mb-4">INVESTIMENTO</p>
+            <h2 className="font-display text-4xl sm:text-6xl font-bold leading-tight text-balance">
+              Escolha o seu lote e <em className="text-sienna-soft not-italic">garanta sua vaga.</em>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
+            {[
+              { lote: "1º LOTE", price: "R$437", until: "até 07/Jul", highlight: true, badge: "🔥 Ativo" },
+              { lote: "2º LOTE", price: "R$467", until: "até 14/Jul", highlight: false },
+              { lote: "3º LOTE", price: "R$497", until: "até esgotar", highlight: false },
+            ].map((l) => (
+              <div
+                key={l.lote}
+                className={`relative p-8 rounded-3xl border transition-smooth ${
+                  l.highlight
+                    ? "bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
+                    : "bg-cream/5 border-cream/15"
+                }`}
+              >
+                {l.badge && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider">
+                    {l.badge}
+                  </span>
+                )}
+                <p className={`font-stencil text-xs tracking-[0.3em] mb-3 ${l.highlight ? "text-cream/90" : "text-sienna-soft"}`}>{l.lote}</p>
+                <p className="font-display text-6xl font-black leading-none mb-2">{l.price}</p>
+                <p className={`text-sm mb-6 ${l.highlight ? "text-cream/90" : "text-cream/70"}`}>{l.until}</p>
+                <ul className="space-y-2 text-sm">
+                  {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                    <li key={f} className="flex gap-2 items-start">
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${l.highlight ? "text-cream" : "text-sienna-soft"}`} />
+                      <span className={l.highlight ? "text-cream/95" : "text-cream/85"}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-10 text-center space-y-4">
+            <p className="text-cream/85">
+              🍄 <strong>Casais, duplas e grupos:</strong> descontos especiais 🍄‍🟫
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
+                <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                  Quero minha vaga · 1º lote R$437
+                  <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-none px-8 h-16 text-base border-cream/30 text-cream hover:bg-cream hover:text-forest-deep">
+                <a
+                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20descontos%20para%20casais%2C%20duplas%20ou%20grupos%20na%20Ca%C3%A7ada%20de%20Cogumelos."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Falar sobre desconto
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* CTA */}
       <section className="py-24 sm:py-32">
