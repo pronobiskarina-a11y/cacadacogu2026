@@ -35,7 +35,7 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       {/* WHATSAPP FLOATING */}
       <a
-href="https://wa.me/5541995472974"
+ href="https://wa.me/5541995472974"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="Fale conosco no WhatsApp"
@@ -152,6 +152,75 @@ href="https://wa.me/5541995472974"
           </div>
         </div>
       </header>
+
+      {/* INVESTMENT / LOTES — compacto, logo após o hero */}
+      <section id="investimento" className="py-12 sm:py-16 bg-forest-deep text-cream">
+        <div className="container">
+          <div className="max-w-3xl mx-auto text-center mb-8">
+            <p className="font-stencil text-sienna-soft text-sm tracking-[0.3em] mb-3">INVESTIMENTO</p>
+            <h2 className="font-display text-3xl sm:text-5xl font-bold leading-tight text-balance">
+              Escolha o seu lote e <em className="text-sienna-soft not-italic">garanta sua vaga.</em>
+            </h2>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
+            {[
+              { lote: "1º LOTE", price: "R$437", until: "até 07/Jul", highlight: true, badge: "🔥 Ativo" },
+              { lote: "2º LOTE", price: "R$467", until: "até 14/Jul", highlight: false },
+              { lote: "3º LOTE", price: "R$497", until: "até esgotar", highlight: false },
+            ].map((l) => (
+              <div
+                key={l.lote}
+                className={`relative p-6 rounded-2xl border transition-smooth ${
+                  l.highlight
+                    ? "bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
+                    : "bg-cream/5 border-cream/15"
+                }`}
+              >
+                {l.badge && (
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider">
+                    {l.badge}
+                  </span>
+                )}
+                <p className={`font-stencil text-xs tracking-[0.3em] mb-2 ${l.highlight ? "text-cream/90" : "text-sienna-soft"}`}>{l.lote}</p>
+                <p className="font-display text-5xl font-black leading-none mb-1">{l.price}</p>
+                <p className={`text-sm mb-4 ${l.highlight ? "text-cream/90" : "text-cream/70"}`}>{l.until}</p>
+                <ul className="space-y-1.5 text-sm">
+                  {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                    <li key={f} className="flex gap-2 items-start">
+                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${l.highlight ? "text-cream" : "text-sienna-soft"}`} />
+                      <span className={l.highlight ? "text-cream/95" : "text-cream/85"}>{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
+            <p className="text-cream/85 text-sm">
+              🍄 <strong>Casais, duplas e grupos:</strong> descontos especiais 🍄‍🟫
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
+                <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
+                  Quero minha vaga · 1º lote R$437
+                  <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="rounded-none px-8 h-14 text-base border-cream/30 text-cream hover:bg-cream hover:text-forest-deep">
+                <a
+                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20descontos%20para%20casais%2C%20duplas%20ou%20grupos%20na%20Ca%C3%A7ada%20de%20Cogumelos."
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Falar sobre desconto
+                </a>
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
 
       {/* DETAILS */}
       <section id="detalhes" className="py-20 sm:py-24">
@@ -310,6 +379,26 @@ href="https://wa.me/5541995472974"
         </div>
       </section>
 
+      {/* COMMUNITY AFTER — logo após o guia */}
+      <section className="py-20 sm:py-28 bg-secondary/40">
+        <div className="container">
+          <div className="max-w-4xl mx-auto grid md:grid-cols-[auto_1fr] gap-8 items-start p-8 sm:p-12 rounded-3xl bg-background border border-border shadow-soft">
+            <div className="w-20 h-20 rounded-2xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
+              <MessageCircle className="w-10 h-10 text-[#25D366]" strokeWidth={1.75} />
+            </div>
+            <div>
+              <p className="font-stencil text-sienna text-xs tracking-[0.3em] mb-3">A EXPERIÊNCIA CONTINUA</p>
+              <h2 className="font-display text-3xl sm:text-4xl font-bold text-forest-deep leading-tight mb-4">
+                Depois da caçada, você entra para um <em className="text-sienna not-italic">grupo exclusivo</em>.
+              </h2>
+              <p className="text-muted-foreground text-lg leading-relaxed">
+                Um grupo no WhatsApp com <strong className="text-forest-deep">alguns dos maiores especialistas em identificação de cogumelos do Brasil</strong> e outros participantes. Um espaço para trocar experiências, compartilhar descobertas e seguir aprendendo.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
      {/* FOOD / GASTRONOMY */}
 <section className="py-24 sm:py-32 bg-forest-deep text-cream relative overflow-hidden">
   <div className="container relative z-10">
@@ -383,95 +472,6 @@ href="https://wa.me/5541995472974"
               <img src={mParticipant.url} alt="Participante da Caçada segurando um cogumelo silvestre encontrado na trilha" className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105" loading="lazy" />
               <figcaption className="absolute bottom-3 left-4 text-cream font-stencil text-[10px] tracking-[0.25em] drop-shadow-lg">SUAS DESCOBERTAS</figcaption>
             </figure>
-          </div>
-        </div>
-      </section>
-
-      {/* COMMUNITY AFTER */}
-      <section className="py-20 sm:py-28 bg-secondary/40">
-        <div className="container">
-          <div className="max-w-4xl mx-auto grid md:grid-cols-[auto_1fr] gap-8 items-start p-8 sm:p-12 rounded-3xl bg-background border border-border shadow-soft">
-            <div className="w-20 h-20 rounded-2xl bg-[#25D366]/10 flex items-center justify-center shrink-0">
-              <MessageCircle className="w-10 h-10 text-[#25D366]" strokeWidth={1.75} />
-            </div>
-            <div>
-              <p className="font-stencil text-sienna text-xs tracking-[0.3em] mb-3">A EXPERIÊNCIA CONTINUA</p>
-              <h2 className="font-display text-3xl sm:text-4xl font-bold text-forest-deep leading-tight mb-4">
-                Depois da caçada, você entra para um <em className="text-sienna not-italic">grupo exclusivo</em>.
-              </h2>
-              <p className="text-muted-foreground text-lg leading-relaxed">
-                Um grupo no WhatsApp com <strong className="text-forest-deep">alguns dos maiores especialistas em identificação de cogumelos do Brasil</strong> e outros participantes. Um espaço para trocar experiências, compartilhar descobertas e seguir aprendendo.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* INVESTMENT / LOTES */}
-      <section id="investimento" className="py-20 sm:py-28 bg-forest-deep text-cream">
-        <div className="container">
-          <div className="max-w-3xl mx-auto text-center mb-12">
-            <p className="font-stencil text-sienna-soft text-sm tracking-[0.3em] mb-4">INVESTIMENTO</p>
-            <h2 className="font-display text-4xl sm:text-6xl font-bold leading-tight text-balance">
-              Escolha o seu lote e <em className="text-sienna-soft not-italic">garanta sua vaga.</em>
-            </h2>
-          </div>
-
-          <div className="grid md:grid-cols-3 gap-5 max-w-5xl mx-auto">
-            {[
-              { lote: "1º LOTE", price: "R$437", until: "até 07/Jul", highlight: true, badge: "🔥 Ativo" },
-              { lote: "2º LOTE", price: "R$467", until: "até 14/Jul", highlight: false },
-              { lote: "3º LOTE", price: "R$497", until: "até esgotar", highlight: false },
-            ].map((l) => (
-              <div
-                key={l.lote}
-                className={`relative p-8 rounded-3xl border transition-smooth ${
-                  l.highlight
-                    ? "bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
-                    : "bg-cream/5 border-cream/15"
-                }`}
-              >
-                {l.badge && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider">
-                    {l.badge}
-                  </span>
-                )}
-                <p className={`font-stencil text-xs tracking-[0.3em] mb-3 ${l.highlight ? "text-cream/90" : "text-sienna-soft"}`}>{l.lote}</p>
-                <p className="font-display text-6xl font-black leading-none mb-2">{l.price}</p>
-                <p className={`text-sm mb-6 ${l.highlight ? "text-cream/90" : "text-cream/70"}`}>{l.until}</p>
-                <ul className="space-y-2 text-sm">
-                  {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                    <li key={f} className="flex gap-2 items-start">
-                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${l.highlight ? "text-cream" : "text-sienna-soft"}`} />
-                      <span className={l.highlight ? "text-cream/95" : "text-cream/85"}>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-
-          <div className="max-w-3xl mx-auto mt-10 text-center space-y-4">
-            <p className="text-cream/85">
-              🍄 <strong>Casais, duplas e grupos:</strong> descontos especiais 🍄‍🟫
-            </p>
-            <div className="flex flex-wrap gap-3 justify-center">
-              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
-                <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Quero minha vaga · 1º lote R$437
-                  <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </a>
-              </Button>
-              <Button asChild size="lg" variant="outline" className="rounded-none px-8 h-16 text-base border-cream/30 text-cream hover:bg-cream hover:text-forest-deep">
-                <a
-                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20descontos%20para%20casais%2C%20duplas%20ou%20grupos%20na%20Ca%C3%A7ada%20de%20Cogumelos."
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  Falar sobre desconto
-                </a>
-              </Button>
-            </div>
           </div>
         </div>
       </section>
