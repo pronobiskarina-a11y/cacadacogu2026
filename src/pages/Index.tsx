@@ -163,40 +163,66 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {[
-              { lote: "1º LOTE", price: "R$437", until: "até 07/Jul", highlight: true, badge: "🔥 Ativo" },
-              { lote: "2º LOTE", price: "R$467", until: "até 14/Jul", highlight: false },
-              { lote: "3º LOTE", price: "R$497", until: "até esgotar", highlight: false },
-            ].map((l) => (
-              <a
-                key={l.lote}
-                href={FORM_URL}
-                target="_blank"
-                rel="noopener noreferrer"
-                className={`relative p-6 rounded-2xl border transition-smooth block ${
-                  l.highlight
-                    ? "bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
-                    : "bg-cream/5 border-cream/15"
-                }`}
-              >
-                {l.badge && (
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider">
-                    {l.badge}
-                  </span>
-                )}
-                <p className={`font-stencil text-xs tracking-[0.3em] mb-2 ${l.highlight ? "text-cream/90" : "text-sienna-soft"}`}>{l.lote}</p>
-                <p className="font-display text-5xl font-black leading-none mb-1">{l.price}</p>
-                <p className={`text-sm mb-4 ${l.highlight ? "text-cream/90" : "text-cream/70"}`}>{l.until}</p>
-                <ul className="space-y-1.5 text-sm">
-                  {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                    <li key={f} className="flex gap-2 items-start">
-                      <CheckCircle2 className={`w-4 h-4 shrink-0 mt-0.5 ${l.highlight ? "text-cream" : "text-sienna-soft"}`} />
-                      <span className={l.highlight ? "text-cream/95" : "text-cream/85"}>{f}</span>
-                    </li>
-                  ))}
-                </ul>
-              </a>
-            ))}
+            {/* 1º LOTE — ESGOTADO */}
+            <div className="relative p-6 rounded-2xl border transition-smooth opacity-50 bg-cream/5 border-cream/10 select-none">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream/20 text-cream/70 text-xs font-bold uppercase tracking-wider border border-cream/20">
+                ESGOTADO
+              </span>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/50">1º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$437</p>
+              <p className="text-sm mb-4 text-cream/40">até 07/Jul</p>
+              <ul className="space-y-1.5 text-sm">
+                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                  <li key={f} className="flex gap-2 items-start">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
+                    <span className="text-cream/50">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 2º LOTE — ATIVO */}
+            <a
+              href={FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
+            >
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider">
+                🔥 Ativo
+              </span>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90">2º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1">R$467</p>
+              <p className="text-sm mb-4 text-cream/90">até 14/Jul</p>
+              <ul className="space-y-1.5 text-sm">
+                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                  <li key={f} className="flex gap-2 items-start">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream" />
+                    <span className="text-cream/95">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </a>
+
+            {/* 3º LOTE */}
+            <a
+              href={FORM_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative p-6 rounded-2xl border transition-smooth block bg-cream/5 border-cream/15"
+            >
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-sienna-soft">3º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
+              <p className="text-sm mb-4 text-cream/70">até esgotar</p>
+              <ul className="space-y-1.5 text-sm">
+                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                  <li key={f} className="flex gap-2 items-start">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-sienna-soft" />
+                    <span className="text-cream/85">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </a>
           </div>
 
           <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
