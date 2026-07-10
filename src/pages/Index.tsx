@@ -62,7 +62,7 @@ const Index = () => {
           </div>
         </div>
         <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🍄 VAGAS LIMITADAS · Caçada em 25 de Julho
+          🍄 2º LOTE · ÚLTIMAS VAGAS
         </div>
       </nav>
 
