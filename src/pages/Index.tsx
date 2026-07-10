@@ -164,22 +164,18 @@ const Index = () => {
 
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {/* 1º LOTE — ESGOTADO · destaque máximo */}
-            <div className="relative p-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/10 select-none overflow-hidden">
-              {/* Diagonal ribbon */}
-              <div className="absolute top-0 right-0 z-10">
-                <div className="w-28 h-28 bg-cream/10 absolute -top-14 -right-14 rotate-45 border-b border-cream/20" />
-              </div>
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream/30 text-cream/90 text-xs font-bold uppercase tracking-wider border border-cream/30 backdrop-blur-sm">
-                ESGOTADO
+            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-75 bg-cream/8 border-cream/20 select-none">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
+                ✕ ESGOTADO
               </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/50 mt-2">1º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/30 line-through">R$437</p>
-              <p className="text-sm mb-4 text-cream/40">Vagas esgotadas</p>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">1º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/50 line-through">R$437</p>
+              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/20" />
-                    <span className="text-cream/40">{f}</span>
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
+                    <span className="text-cream/50">{f}</span>
                   </li>
                 ))}
               </ul>
