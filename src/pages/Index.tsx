@@ -102,6 +102,11 @@ const Index = () => {
               </span>
             </div>
 
+            <div className="mb-6 -mt-2">
+              <span className="font-display text-cream text-xl sm:text-2xl font-bold tracking-wide">Campo Largo - PR</span>
+              <span className="block font-stencil text-cream/60 text-xs sm:text-sm tracking-[0.2em] mt-0.5">do ladinho de Curitiba</span>
+            </div>
+
             <h1 className="font-display text-[3.5rem] sm:text-8xl lg:text-[9rem] font-black text-cream leading-[0.85] text-balance mb-2">
               Caçada de
             </h1>
