@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              VAGAS LIMITADAS · 25/07
+              2º LOTE · ÚLTIMAS VAGAS
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
@@ -62,7 +62,7 @@ const Index = () => {
           </div>
         </div>
         <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🍄 VAGAS LIMITADAS · Caçada em 25 de Julho
+          🍄 2º LOTE · ÚLTIMAS VAGAS
         </div>
       </nav>
 
@@ -115,7 +115,7 @@ const Index = () => {
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
               <div className="border-l-4 border-sienna pl-5">
-                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">2º LOTE · ATÉ 14/JUL 🔥</p>
+                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">2º LOTE · ÚLTIMAS VAGAS 🔥</p>
                 <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$467</p>
                 <p className="text-cream/80 text-sm mt-2">
                   ou <strong className="text-cream">4x sem juros</strong> · almoço + vinho inclusos
@@ -145,7 +145,7 @@ const Index = () => {
                 </a>
               </Button>
               <span className="font-stencil text-cream/70 text-sm tracking-[0.2em] ml-2 animate-pulse">
-                ◉ VAGAS LIMITADAS
+                ◉ ÚLTIMAS VAGAS
               </span>
             </div>
           </div>
@@ -163,37 +163,41 @@ const Index = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {/* 1º LOTE — ESGOTADO */}
-            <div className="relative p-6 rounded-2xl border transition-smooth opacity-50 bg-cream/5 border-cream/10 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream/20 text-cream/70 text-xs font-bold uppercase tracking-wider border border-cream/20">
+            {/* 1º LOTE — ESGOTADO · destaque máximo */}
+            <div className="relative p-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/10 select-none overflow-hidden">
+              {/* Diagonal ribbon */}
+              <div className="absolute top-0 right-0 z-10">
+                <div className="w-28 h-28 bg-cream/10 absolute -top-14 -right-14 rotate-45 border-b border-cream/20" />
+              </div>
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream/30 text-cream/90 text-xs font-bold uppercase tracking-wider border border-cream/30 backdrop-blur-sm">
                 ESGOTADO
               </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/50">1º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$437</p>
-              <p className="text-sm mb-4 text-cream/40">até 07/Jul</p>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/50 mt-2">1º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/30 line-through">R$437</p>
+              <p className="text-sm mb-4 text-cream/40">Vagas esgotadas</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
-                    <span className="text-cream/50">{f}</span>
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/20" />
+                    <span className="text-cream/40">{f}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* 2º LOTE — ATIVO */}
+            {/* 2º LOTE — ATIVO · ÚLTIMAS VAGAS */}
             <a
               href={FORM_URL}
               target="_blank"
               rel="noopener noreferrer"
-              className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02]"
+              className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02] animate-pulse"
             >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider">
-                🔥 Ativo
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider shadow-lg">
+                🔥 ÚLTIMAS VAGAS
               </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90">2º LOTE</p>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">2º LOTE</p>
               <p className="font-display text-5xl font-black leading-none mb-1">R$467</p>
-              <p className="text-sm mb-4 text-cream/90">até 14/Jul</p>
+              <p className="text-sm mb-4 text-cream/90">Poucas vagas restantes</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
@@ -204,16 +208,14 @@ const Index = () => {
               </ul>
             </a>
 
-            {/* 3º LOTE */}
-            <a
-              href={FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative p-6 rounded-2xl border transition-smooth block bg-cream/5 border-cream/15"
-            >
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-sienna-soft">3º LOTE</p>
+            {/* 3º LOTE — BREVE */}
+            <div className="relative p-6 rounded-2xl border transition-smooth bg-cream/5 border-cream/15 select-none">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream/10 text-cream/60 text-xs font-bold uppercase tracking-wider border border-cream/20">
+                EM BREVE
+              </span>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-sienna-soft mt-2">3º LOTE</p>
               <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
-              <p className="text-sm mb-4 text-cream/70">até esgotar</p>
+              <p className="text-sm mb-4 text-cream/70">A definir</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
@@ -222,7 +224,7 @@ const Index = () => {
                   </li>
                 ))}
               </ul>
-            </a>
+            </div>
           </div>
 
           <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
@@ -314,7 +316,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · 2º lote R$ 467
+                Quero minha vaga · Últimas vagas 2º lote
                 <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
