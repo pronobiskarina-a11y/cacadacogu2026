@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              VAGAS LIMITADAS · 25/07
+              2º LOTE · ÚLTIMAS VAGAS
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
