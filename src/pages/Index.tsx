@@ -115,7 +115,7 @@ const Index = () => {
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
               <div className="border-l-4 border-sienna pl-5">
-                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">2º LOTE · ATÉ 14/JUL 🔥</p>
+                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">2º LOTE · ÚLTIMAS VAGAS 🔥</p>
                 <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$467</p>
                 <p className="text-cream/80 text-sm mt-2">
                   ou <strong className="text-cream">4x sem juros</strong> · almoço + vinho inclusos
@@ -145,7 +145,7 @@ const Index = () => {
                 </a>
               </Button>
               <span className="font-stencil text-cream/70 text-sm tracking-[0.2em] ml-2 animate-pulse">
-                ◉ VAGAS LIMITADAS
+                ◉ ÚLTIMAS VAGAS
               </span>
             </div>
           </div>
