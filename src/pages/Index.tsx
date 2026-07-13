@@ -171,14 +171,24 @@ const Index = () => {
             </h2>
           </div>
 
+          {/* Aviso de destaque */}
+          <div className="max-w-3xl mx-auto mb-8 text-center">
+            <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-full bg-destructive/15 border border-destructive/40">
+              <span className="text-destructive text-lg">⚠️</span>
+              <p className="text-cream text-sm sm:text-base font-bold uppercase tracking-wider">
+                1º e 2º lotes <span className="text-destructive">esgotados</span> · Estamos no <span className="text-sienna-soft">3º e último lote</span>
+              </p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {/* 1º LOTE — ESGOTADO · destaque máximo */}
-            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-75 bg-cream/8 border-cream/20 select-none">
+            {/* 1º LOTE — ESGOTADO */}
+            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
                 ✕ ESGOTADO
               </span>
               <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">1º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/50 line-through">R$437</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$437</p>
               <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
@@ -190,7 +200,25 @@ const Index = () => {
               </ul>
             </div>
 
-            {/* 2º LOTE — ATIVO · ÚLTIMAS VAGAS */}
+            {/* 2º LOTE — ESGOTADO */}
+            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
+                ✕ ESGOTADO
+              </span>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">2º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$467</p>
+              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
+              <ul className="space-y-1.5 text-sm">
+                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                  <li key={f} className="flex gap-2 items-start">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
+                    <span className="text-cream/50">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 3º LOTE — ATIVO · ÚLTIMO LOTE */}
             <a
               href={FORM_URL}
               target="_blank"
@@ -198,11 +226,11 @@ const Index = () => {
               className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02] animate-pulse"
             >
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider shadow-lg">
-                🔥 ÚLTIMAS VAGAS
+                🔥 ÚLTIMO LOTE
               </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">2º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1">R$467</p>
-              <p className="text-sm mb-4 text-cream/90">Poucas vagas restantes</p>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">3º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
+              <p className="text-sm mb-4 text-cream/90">Vagas disponíveis · último lote</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
@@ -212,24 +240,6 @@ const Index = () => {
                 ))}
               </ul>
             </a>
-
-            {/* 3º LOTE — BREVE */}
-            <div className="relative p-6 rounded-2xl border transition-smooth bg-cream/5 border-cream/15 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream/10 text-cream/60 text-xs font-bold uppercase tracking-wider border border-cream/20">
-                EM BREVE
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-sienna-soft mt-2">3º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
-              <p className="text-sm mb-4 text-cream/70">A definir</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-sienna-soft" />
-                    <span className="text-cream/85">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
