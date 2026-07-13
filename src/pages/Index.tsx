@@ -154,7 +154,7 @@ const Index = () => {
                 </a>
               </Button>
               <span className="font-stencil text-cream/70 text-sm tracking-[0.2em] ml-2 animate-pulse">
-                ◉ ÚLTIMAS VAGAS
+                ◉ ÚLTIMO LOTE
               </span>
             </div>
           </div>
