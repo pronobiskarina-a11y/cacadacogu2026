@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              2º LOTE · ÚLTIMAS VAGAS
+              3º LOTE · ÚLTIMO LOTE
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
@@ -62,7 +62,7 @@ const Index = () => {
           </div>
         </div>
         <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🍄 2º LOTE · ÚLTIMAS VAGAS
+          🍄 3º LOTE · ÚLTIMO LOTE
         </div>
       </nav>
 
