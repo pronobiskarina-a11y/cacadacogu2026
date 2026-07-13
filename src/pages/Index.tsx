@@ -249,7 +249,7 @@ const Index = () => {
             <div className="flex flex-wrap gap-3 justify-center">
               <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Quero minha vaga · 2º lote R$467
+                  Quero minha vaga · 3º lote R$497
                   <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
