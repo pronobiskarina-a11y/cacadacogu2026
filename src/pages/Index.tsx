@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              2º LOTE · ÚLTIMAS VAGAS
+              3º LOTE · ÚLTIMO LOTE
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
@@ -62,7 +62,7 @@ const Index = () => {
           </div>
         </div>
         <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🍄 2º LOTE · ÚLTIMAS VAGAS
+          🍄 3º LOTE · ÚLTIMO LOTE
         </div>
       </nav>
 
@@ -120,8 +120,12 @@ const Index = () => {
 
             <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
               <div className="border-l-4 border-sienna pl-5">
-                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">2º LOTE · ÚLTIMAS VAGAS 🔥</p>
-                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$467</p>
+                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">3º E ÚLTIMO LOTE 🔥</p>
+                <div className="flex items-baseline gap-3 mb-1">
+                  <span className="font-display text-2xl font-black text-cream/40 line-through">R$437</span>
+                  <span className="font-display text-2xl font-black text-cream/40 line-through">R$467</span>
+                </div>
+                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$497</p>
                 <p className="text-cream/80 text-sm mt-2">
                   ou <strong className="text-cream">4x sem juros</strong> · almoço + vinho inclusos
                 </p>
@@ -150,7 +154,7 @@ const Index = () => {
                 </a>
               </Button>
               <span className="font-stencil text-cream/70 text-sm tracking-[0.2em] ml-2 animate-pulse">
-                ◉ ÚLTIMAS VAGAS
+                ◉ ÚLTIMO LOTE
               </span>
             </div>
           </div>
@@ -167,14 +171,24 @@ const Index = () => {
             </h2>
           </div>
 
+          {/* Aviso de destaque */}
+          <div className="max-w-3xl mx-auto mb-8 text-center">
+            <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-full bg-destructive/15 border border-destructive/40">
+              <span className="text-destructive text-lg">⚠️</span>
+              <p className="text-cream text-sm sm:text-base font-bold uppercase tracking-wider">
+                1º e 2º lotes <span className="text-destructive">esgotados</span> · Estamos no <span className="text-sienna-soft">3º e último lote</span>
+              </p>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {/* 1º LOTE — ESGOTADO · destaque máximo */}
-            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-75 bg-cream/8 border-cream/20 select-none">
+            {/* 1º LOTE — ESGOTADO */}
+            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
                 ✕ ESGOTADO
               </span>
               <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">1º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/50 line-through">R$437</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$437</p>
               <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
@@ -186,7 +200,25 @@ const Index = () => {
               </ul>
             </div>
 
-            {/* 2º LOTE — ATIVO · ÚLTIMAS VAGAS */}
+            {/* 2º LOTE — ESGOTADO */}
+            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
+                ✕ ESGOTADO
+              </span>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">2º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$467</p>
+              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
+              <ul className="space-y-1.5 text-sm">
+                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                  <li key={f} className="flex gap-2 items-start">
+                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
+                    <span className="text-cream/50">{f}</span>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            {/* 3º LOTE — ATIVO · ÚLTIMO LOTE */}
             <a
               href={FORM_URL}
               target="_blank"
@@ -194,11 +226,11 @@ const Index = () => {
               className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02] animate-pulse"
             >
               <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider shadow-lg">
-                🔥 ÚLTIMAS VAGAS
+                🔥 ÚLTIMO LOTE
               </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">2º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1">R$467</p>
-              <p className="text-sm mb-4 text-cream/90">Poucas vagas restantes</p>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">3º LOTE</p>
+              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
+              <p className="text-sm mb-4 text-cream/90">Vagas disponíveis · último lote</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
@@ -208,24 +240,6 @@ const Index = () => {
                 ))}
               </ul>
             </a>
-
-            {/* 3º LOTE — BREVE */}
-            <div className="relative p-6 rounded-2xl border transition-smooth bg-cream/5 border-cream/15 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-3 py-1 rounded-full bg-cream/10 text-cream/60 text-xs font-bold uppercase tracking-wider border border-cream/20">
-                EM BREVE
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-sienna-soft mt-2">3º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
-              <p className="text-sm mb-4 text-cream/70">A definir</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-sienna-soft" />
-                    <span className="text-cream/85">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
           </div>
 
           <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
@@ -235,7 +249,7 @@ const Index = () => {
             <div className="flex flex-wrap gap-3 justify-center">
               <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Quero minha vaga · 2º lote R$467
+                  Quero minha vaga · 3º lote R$497
                   <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
@@ -317,7 +331,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · Últimas vagas 2º lote
+                Quero minha vaga · 3º e último lote
                 <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
