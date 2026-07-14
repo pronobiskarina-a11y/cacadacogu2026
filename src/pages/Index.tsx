@@ -96,6 +96,19 @@ const Index = () => {
 
         <div className="container relative z-10 py-16 lg:pl-24">
           <div className="max-w-4xl animate-fade-up">
+            {/* Últimas vagas — destaque principal */}
+            <div className="mb-8 -mt-4">
+              <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-sienna border-2 border-sienna-soft shadow-glow animate-pulse">
+                <span className="relative flex h-3 w-3">
+                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cream opacity-75" />
+                  <span className="relative inline-flex rounded-full h-3 w-3 bg-cream" />
+                </span>
+                <span className="font-stencil text-cream text-sm sm:text-base font-black tracking-[0.25em] uppercase">
+                  🔥 Últimas vagas · 3º e último lote
+                </span>
+              </div>
+            </div>
+
             <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-sienna-soft" />
               <span className="font-stencil text-cream/80 text-sm sm:text-base tracking-[0.25em]">
@@ -103,13 +116,6 @@ const Index = () => {
               </span>
             </div>
 
-            {/* Últimas vagas — destaque */}
-            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-sienna/90 border border-sienna-soft/60 shadow-glow animate-pulse">
-              <span className="w-2 h-2 rounded-full bg-cream animate-pulse" />
-              <span className="font-stencil text-cream text-xs sm:text-sm font-bold tracking-[0.25em] uppercase">
-                Últimas vagas · 3º e último lote
-              </span>
-            </div>
 
             <div className="mb-6 -mt-2">
               <span className="font-display text-cream text-xl sm:text-2xl font-bold tracking-wide">Campo Largo - PR</span>
