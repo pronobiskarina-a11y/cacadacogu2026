@@ -54,7 +54,7 @@ const Index = () => {
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
             <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              3º LOTE · ÚLTIMO LOTE
+              ÚLTIMAS VAGAS · 3º LOTE
             </span>
             <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
@@ -62,8 +62,9 @@ const Index = () => {
           </div>
         </div>
         <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🍄 3º LOTE · ÚLTIMO LOTE
+          🔥 ÚLTIMAS VAGAS · 3º LOTE
         </div>
+
       </nav>
 
       {/* HERO — editorial magazine layout */}
@@ -95,10 +96,18 @@ const Index = () => {
 
         <div className="container relative z-10 py-16 lg:pl-24">
           <div className="max-w-4xl animate-fade-up">
-            <div className="flex items-center gap-3 mb-8">
+            <div className="flex items-center gap-3 mb-6">
               <div className="h-px w-12 bg-sienna-soft" />
               <span className="font-stencil text-cream/80 text-sm sm:text-base tracking-[0.25em]">
                 NOVA EDIÇÃO · MATA ATLÂNTICA
+              </span>
+            </div>
+
+            {/* Últimas vagas — destaque */}
+            <div className="inline-flex items-center gap-2 mb-6 px-4 py-2 rounded-full bg-sienna/90 border border-sienna-soft/60 shadow-glow animate-pulse">
+              <span className="w-2 h-2 rounded-full bg-cream animate-pulse" />
+              <span className="font-stencil text-cream text-xs sm:text-sm font-bold tracking-[0.25em] uppercase">
+                Últimas vagas · 3º e último lote
               </span>
             </div>
 
@@ -106,6 +115,7 @@ const Index = () => {
               <span className="font-display text-cream text-xl sm:text-2xl font-bold tracking-wide">Campo Largo - PR</span>
               <span className="block font-stencil text-cream/60 text-xs sm:text-sm tracking-[0.2em] mt-0.5">do ladinho de Curitiba</span>
             </div>
+
 
             <h1 className="font-display text-[3.5rem] sm:text-8xl lg:text-[9rem] font-black text-cream leading-[0.85] text-balance mb-2">
               Caçada de
@@ -153,8 +163,8 @@ const Index = () => {
                   <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <span className="font-stencil text-cream/70 text-sm tracking-[0.2em] ml-2 animate-pulse">
-                ◉ ÚLTIMO LOTE
+              <span className="font-stencil text-sienna-soft text-sm font-bold tracking-[0.2em] ml-2 animate-pulse">
+                ◉ ÚLTIMAS VAGAS
               </span>
             </div>
           </div>
@@ -176,10 +186,11 @@ const Index = () => {
             <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-full bg-destructive/15 border border-destructive/40">
               <span className="text-destructive text-lg">⚠️</span>
               <p className="text-cream text-sm sm:text-base font-bold uppercase tracking-wider">
-                1º e 2º lotes <span className="text-destructive">esgotados</span> · Estamos no <span className="text-sienna-soft">3º e último lote</span>
+                1º e 2º lotes <span className="text-destructive">esgotados</span> · <span className="text-sienna-soft">Últimas vagas</span> no 3º lote
               </p>
             </div>
           </div>
+
 
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
             {/* 1º LOTE — ESGOTADO */}
@@ -225,12 +236,12 @@ const Index = () => {
               rel="noopener noreferrer"
               className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02] animate-pulse"
             >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-bold uppercase tracking-wider shadow-lg">
-                🔥 ÚLTIMO LOTE
+              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-black uppercase tracking-wider shadow-lg whitespace-nowrap">
+                🔥 Últimas vagas
               </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">3º LOTE</p>
+              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">3º LOTE · ÚLTIMO</p>
               <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
-              <p className="text-sm mb-4 text-cream/90">Vagas disponíveis · último lote</p>
+              <p className="text-sm mb-4 text-cream/95 font-semibold">Poucas vagas restantes</p>
               <ul className="space-y-1.5 text-sm">
                 {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
                   <li key={f} className="flex gap-2 items-start">
