@@ -159,9 +159,10 @@ const Index = () => {
                 Falar no WhatsApp
               </a>
             </div>
-
+          </div>
         </div>
       </header>
+
 
       {/* INVESTMENT / LOTES — compacto, logo após o hero */}
       <section id="investimento" className="py-12 sm:py-16 bg-forest-deep text-cream">
