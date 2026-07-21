@@ -107,12 +107,6 @@ const Index = () => {
               </div>
             </div>
 
-            <div className="flex items-center gap-3 mb-6">
-              <div className="h-px w-12 bg-sienna-soft" />
-              <span className="font-stencil text-cream/80 text-sm sm:text-base tracking-[0.25em]">
-                NOVA EDIÇÃO · MATA ATLÂNTICA
-              </span>
-            </div>
 
 
             <div className="mb-6 -mt-2">
