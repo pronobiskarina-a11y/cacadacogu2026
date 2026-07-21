@@ -168,106 +168,60 @@ const Index = () => {
       <section id="investimento" className="py-12 sm:py-16 bg-forest-deep text-cream">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-8">
-            <p className="font-stencil text-sienna-soft text-sm tracking-[0.3em] mb-3">INVESTIMENTO</p>
+            <p className="font-stencil text-destructive text-sm tracking-[0.3em] mb-3">✕ EDIÇÃO ESGOTADA</p>
             <h2 className="font-display text-3xl sm:text-5xl font-bold leading-tight text-balance">
-              Escolha o seu lote e <em className="text-sienna-soft not-italic">garanta sua vaga.</em>
+              Todos os lotes <em className="text-sienna-soft not-italic">encerrados.</em>
             </h2>
+            <p className="text-cream/80 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
+              Muito obrigada! As vagas dos 3 lotes foram preenchidas. Entre na <strong className="text-cream">lista de espera 2027</strong> para ser avisado(a) em primeira mão.
+            </p>
           </div>
-
-          {/* Aviso de destaque */}
-          <div className="max-w-3xl mx-auto mb-8 text-center">
-            <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-full bg-destructive/15 border border-destructive/40">
-              <span className="text-destructive text-lg">⚠️</span>
-              <p className="text-cream text-sm sm:text-base font-bold uppercase tracking-wider">
-                1º e 2º lotes <span className="text-destructive">esgotados</span> · <span className="text-sienna-soft">Últimas vagas</span> no 3º lote
-              </p>
-            </div>
-          </div>
-
 
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {/* 1º LOTE — ESGOTADO */}
-            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
-                ✕ ESGOTADO
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">1º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$437</p>
-              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
-                    <span className="text-cream/50">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 2º LOTE — ESGOTADO */}
-            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
-                ✕ ESGOTADO
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">2º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$467</p>
-              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
-                    <span className="text-cream/50">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 3º LOTE — ATIVO · ÚLTIMO LOTE */}
-            <a
-              href={FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02] animate-pulse"
-            >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-black uppercase tracking-wider shadow-lg whitespace-nowrap">
-                🔥 Últimas vagas
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">3º LOTE · ÚLTIMO</p>
-              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
-              <p className="text-sm mb-4 text-cream/95 font-semibold">Poucas vagas restantes</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream" />
-                    <span className="text-cream/95">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </a>
+            {[
+              { lote: "1º LOTE", preco: "R$437" },
+              { lote: "2º LOTE", preco: "R$467" },
+              { lote: "3º LOTE", preco: "R$497" },
+            ].map((l) => (
+              <div key={l.lote} className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
+                  ✕ ESGOTADO
+                </span>
+                <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">{l.lote}</p>
+                <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">{l.preco}</p>
+                <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
+                <ul className="space-y-1.5 text-sm">
+                  {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                    <li key={f} className="flex gap-2 items-start">
+                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
+                      <span className="text-cream/50">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
-          <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
-            <p className="text-cream/85 text-sm">
-              🍄 <strong>Casais, duplas e grupos:</strong> descontos especiais 🍄‍🟫
-            </p>
+          <div className="max-w-3xl mx-auto mt-10 text-center space-y-4">
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
+              <Button asChild size="lg" className="bg-cream hover:bg-cream/90 text-forest-deep rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Quero minha vaga · 3º lote R$497
+                  {WAITLIST_LABEL}
                   <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-none px-8 h-14 text-base border-cream/30 text-cream hover:bg-cream hover:text-forest-deep">
                 <a
-                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20descontos%20para%20casais%2C%20duplas%20ou%20grupos%20na%20Ca%C3%A7ada%20de%20Cogumelos."
+                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20a%20pr%C3%B3xima%20edi%C3%A7%C3%A3o%20da%20Ca%C3%A7ada%20de%20Cogumelos."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Falar sobre desconto
+                  Falar no WhatsApp
                 </a>
               </Button>
             </div>
           </div>
+
         </div>
       </section>
 
