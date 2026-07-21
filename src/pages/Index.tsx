@@ -54,16 +54,16 @@ const Index = () => {
             <span className="truncate">Caçada de Cogumelos</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              ÚLTIMAS VAGAS · 3º LOTE
+            <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-destructive animate-pulse">
+              ✕ TODAS AS VAGAS ESGOTADAS
             </span>
-            <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
-              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
+            <Button asChild size="sm" className="bg-forest-deep hover:bg-forest-mid text-cream rounded-full shadow-soft">
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Lista de espera 2027</a>
             </Button>
           </div>
         </div>
-        <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🔥 ÚLTIMAS VAGAS · 3º LOTE
+        <div className="sm:hidden bg-destructive text-cream text-center text-sm font-bold py-2 px-3">
+          ✕ ESGOTADO · Entrar na lista de espera 2027
         </div>
 
       </nav>
