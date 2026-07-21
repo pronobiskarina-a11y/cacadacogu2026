@@ -482,16 +482,16 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Leaf className="w-10 h-10 text-sienna mx-auto mb-8" />
             <h2 className="font-display text-5xl sm:text-7xl font-bold text-forest-deep mb-6 leading-[1.05] text-balance">
-              Vagas limitadas.<br />
-              <em className="text-sienna not-italic">Garanta a sua.</em>
+              Edição esgotada.<br />
+              <em className="text-sienna not-italic">Vem aí 2027.</em>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-12">
-              Reserve já o seu lugar nesta vivência única na Mata Atlântica e deixe-se guiar pela floresta.
+              Entre na lista de espera e seja avisado(a) em primeira mão quando abrirmos as inscrições da próxima edição.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-forest-deep hover:bg-forest-mid text-cream rounded-full px-10 h-14 text-base group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Inscreva-se agora
+                  {WAITLIST_LABEL}
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
