@@ -28,7 +28,8 @@ import mHandYellow from "@/assets/moments/hand-yellow-mushrooms.jpg.asset.json";
 
 
 
-const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeafJnwxX6NYadnXhMwM1tpoiuZ9YqJSwouuoOwnHojsVNjDw/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn_9JpZ6dCp-fVqrkQeJLDnwnrZnw4L9SkeqZksm1xjzV5pK8tn8qH_EYGcu8_aem_z3P9evHIRBtI6cwzQJkXnA";
+const FORM_URL = "https://forms.gle/ZCWXJewzHma6bPX89";
+const WAITLIST_LABEL = "Entrar na lista de espera 2027";
 
 const Index = () => {
   return (
