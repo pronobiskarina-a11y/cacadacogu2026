@@ -28,7 +28,8 @@ import mHandYellow from "@/assets/moments/hand-yellow-mushrooms.jpg.asset.json";
 
 
 
-const FORM_URL = "https://docs.google.com/forms/d/e/1FAIpQLSeafJnwxX6NYadnXhMwM1tpoiuZ9YqJSwouuoOwnHojsVNjDw/viewform?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQPNTY3MDY3MzQzMzUyNDI3AAGn_9JpZ6dCp-fVqrkQeJLDnwnrZnw4L9SkeqZksm1xjzV5pK8tn8qH_EYGcu8_aem_z3P9evHIRBtI6cwzQJkXnA";
+const FORM_URL = "https://forms.gle/ZCWXJewzHma6bPX89";
+const WAITLIST_LABEL = "Entrar na lista de espera 2027";
 
 const Index = () => {
   return (
@@ -53,16 +54,16 @@ const Index = () => {
             <span className="truncate">Caçada de Cogumelos</span>
           </div>
           <div className="flex items-center gap-2 sm:gap-3">
-            <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-sienna animate-pulse">
-              ÚLTIMAS VAGAS · 3º LOTE
+            <span className="hidden sm:inline text-sm sm:text-base font-bold uppercase tracking-wide text-destructive animate-pulse">
+              ✕ TODAS AS VAGAS ESGOTADAS
             </span>
-            <Button asChild size="sm" className="bg-sienna hover:bg-sienna/90 text-cream rounded-full shadow-glow">
-              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Quero minha vaga</a>
+            <Button asChild size="sm" className="bg-forest-deep hover:bg-forest-mid text-cream rounded-full shadow-soft">
+              <a href={FORM_URL} target="_blank" rel="noopener noreferrer">Lista de espera 2027</a>
             </Button>
           </div>
         </div>
-        <div className="sm:hidden bg-sienna text-cream text-center text-sm font-bold py-2 px-3 animate-pulse">
-          🔥 ÚLTIMAS VAGAS · 3º LOTE
+        <div className="sm:hidden bg-destructive text-cream text-center text-sm font-bold py-2 px-3">
+          ✕ ESGOTADO · Entrar na lista de espera 2027
         </div>
 
       </nav>
@@ -96,15 +97,12 @@ const Index = () => {
 
         <div className="container relative z-10 py-16 lg:pl-24">
           <div className="max-w-4xl animate-fade-up">
-            {/* Últimas vagas — destaque principal */}
+            {/* ESGOTADO — destaque principal */}
             <div className="mb-8 -mt-4">
-              <div className="inline-flex items-center gap-3 px-5 py-3 rounded-full bg-sienna border-2 border-sienna-soft shadow-glow animate-pulse">
-                <span className="relative flex h-3 w-3">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-cream opacity-75" />
-                  <span className="relative inline-flex rounded-full h-3 w-3 bg-cream" />
-                </span>
+              <div className="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-destructive border-2 border-destructive shadow-elegant">
+                <span className="text-cream text-xl leading-none">✕</span>
                 <span className="font-stencil text-cream text-sm sm:text-base font-black tracking-[0.25em] uppercase">
-                  🔥 Últimas vagas · 3º e último lote
+                  Todas as vagas esgotadas
                 </span>
               </div>
             </div>
@@ -134,153 +132,96 @@ const Index = () => {
               Um dia inteiro <strong className="font-semibold">caçando, identificando e degustando</strong> cogumelos silvestres na floresta, guiado por <strong className="font-semibold text-cream">Jeferson Timm</strong>, autor do livro <em className="text-sienna-soft">Primavera Fungi</em>.
             </p>
 
-            <div className="grid sm:grid-cols-[auto_1fr] gap-6 sm:gap-8 items-start max-w-2xl mb-8">
-              <div className="border-l-4 border-sienna pl-5">
-                <p className="font-stencil text-cream/60 text-xs tracking-[0.3em] mb-1">3º E ÚLTIMO LOTE 🔥</p>
-                <div className="flex items-baseline gap-3 mb-1">
-                  <span className="font-display text-2xl font-black text-cream/40 line-through">R$437</span>
-                  <span className="font-display text-2xl font-black text-cream/40 line-through">R$467</span>
-                </div>
-                <p className="font-display text-5xl sm:text-6xl font-black text-cream leading-none">R$497</p>
-                <p className="text-cream/80 text-sm mt-2">
-                  ou <strong className="text-cream">4x sem juros</strong> · almoço + vinho inclusos
-                </p>
-              </div>
-
-              <div className="bg-cream/5 backdrop-blur-md border border-cream/15 rounded-2xl p-4">
-                <p className="text-cream text-sm font-medium leading-snug mb-2">
-                  ✨ Casais, duplas e grupos com <strong>descontos especiais</strong>
-                </p>
-                <a
-                  href="https://wa.me/5541995472974?text=Oi!%20Vi%20no%20site%20que%20tem%20desconto%20para%20casais%2C%20duplas%20ou%20grupos.%20Pode%20me%20passar%20os%20valores?"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#25D366] text-white text-xs font-semibold hover:bg-[#1ebe57] transition-colors"
-                >
-                  Garanta seu desconto →
-                </a>
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-3 items-center">
-              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
+            {/* Big sold-out card */}
+            <div className="max-w-2xl mb-10 rounded-3xl border-2 border-destructive/60 bg-destructive/10 backdrop-blur-md p-6 sm:p-8">
+              <p className="font-stencil text-destructive text-xs sm:text-sm tracking-[0.3em] mb-3">✕ EDIÇÃO ESGOTADA</p>
+              <h2 className="font-display text-cream text-3xl sm:text-5xl font-black leading-tight mb-3">
+                Sucesso total! <em className="text-sienna-soft not-italic">Todas as vagas foram preenchidas.</em>
+              </h2>
+              <p className="text-cream/90 text-base sm:text-lg leading-relaxed mb-5">
+                Obrigada pelo carinho de sempre. Se você quer viver essa experiência na próxima edição, <strong className="text-cream">entre agora na lista de espera de 2027</strong> e seja avisado(a) em primeira mão quando abrirmos as inscrições.
+              </p>
+              <Button asChild size="lg" className="bg-cream hover:bg-cream/90 text-forest-deep rounded-none px-8 h-14 text-base font-bold uppercase tracking-wider shadow-glow group w-full sm:w-auto">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Quero minha vaga
+                  {WAITLIST_LABEL}
                   <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
-              <span className="font-stencil text-sienna-soft text-sm font-bold tracking-[0.2em] ml-2 animate-pulse">
-                ◉ ÚLTIMAS VAGAS
-              </span>
+            </div>
+
+            <div className="flex flex-wrap gap-3 items-center">
+              <a
+                href="https://wa.me/5541995472974?text=Oi!%20Vi%20que%20a%20Ca%C3%A7ada%20de%20Cogumelos%20est%C3%A1%20esgotada.%20Quero%20saber%20mais%20sobre%20a%20pr%C3%B3xima%20edi%C3%A7%C3%A3o."
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#25D366] hover:bg-[#1ebe57] text-white text-sm font-semibold transition-colors"
+              >
+                Falar no WhatsApp
+              </a>
             </div>
           </div>
         </div>
       </header>
 
+
       {/* INVESTMENT / LOTES — compacto, logo após o hero */}
       <section id="investimento" className="py-12 sm:py-16 bg-forest-deep text-cream">
         <div className="container">
           <div className="max-w-3xl mx-auto text-center mb-8">
-            <p className="font-stencil text-sienna-soft text-sm tracking-[0.3em] mb-3">INVESTIMENTO</p>
+            <p className="font-stencil text-destructive text-sm tracking-[0.3em] mb-3">✕ EDIÇÃO ESGOTADA</p>
             <h2 className="font-display text-3xl sm:text-5xl font-bold leading-tight text-balance">
-              Escolha o seu lote e <em className="text-sienna-soft not-italic">garanta sua vaga.</em>
+              Todos os lotes <em className="text-sienna-soft not-italic">encerrados.</em>
             </h2>
+            <p className="text-cream/80 text-base sm:text-lg mt-4 max-w-2xl mx-auto">
+              Muito obrigada! As vagas dos 3 lotes foram preenchidas. Entre na <strong className="text-cream">lista de espera 2027</strong> para ser avisado(a) em primeira mão.
+            </p>
           </div>
-
-          {/* Aviso de destaque */}
-          <div className="max-w-3xl mx-auto mb-8 text-center">
-            <div className="inline-flex flex-wrap items-center justify-center gap-2 px-5 py-3 rounded-full bg-destructive/15 border border-destructive/40">
-              <span className="text-destructive text-lg">⚠️</span>
-              <p className="text-cream text-sm sm:text-base font-bold uppercase tracking-wider">
-                1º e 2º lotes <span className="text-destructive">esgotados</span> · <span className="text-sienna-soft">Últimas vagas</span> no 3º lote
-              </p>
-            </div>
-          </div>
-
 
           <div className="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
-            {/* 1º LOTE — ESGOTADO */}
-            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
-                ✕ ESGOTADO
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">1º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$437</p>
-              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
-                    <span className="text-cream/50">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 2º LOTE — ESGOTADO */}
-            <div className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive/90 text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
-                ✕ ESGOTADO
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">2º LOTE</p>
-              <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">R$467</p>
-              <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
-                    <span className="text-cream/50">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
-
-            {/* 3º LOTE — ATIVO · ÚLTIMO LOTE */}
-            <a
-              href={FORM_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="relative p-6 rounded-2xl border transition-smooth block bg-sienna text-cream border-sienna-soft shadow-glow scale-[1.02] animate-pulse"
-            >
-              <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-4 py-1.5 rounded-full bg-cream text-sienna text-xs font-black uppercase tracking-wider shadow-lg whitespace-nowrap">
-                🔥 Últimas vagas
-              </span>
-              <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/90 mt-2">3º LOTE · ÚLTIMO</p>
-              <p className="font-display text-5xl font-black leading-none mb-1">R$497</p>
-              <p className="text-sm mb-4 text-cream/95 font-semibold">Poucas vagas restantes</p>
-              <ul className="space-y-1.5 text-sm">
-                {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
-                  <li key={f} className="flex gap-2 items-start">
-                    <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream" />
-                    <span className="text-cream/95">{f}</span>
-                  </li>
-                ))}
-              </ul>
-            </a>
+            {[
+              { lote: "1º LOTE", preco: "R$437" },
+              { lote: "2º LOTE", preco: "R$467" },
+              { lote: "3º LOTE", preco: "R$497" },
+            ].map((l) => (
+              <div key={l.lote} className="relative pt-10 pb-6 px-6 rounded-2xl border transition-smooth opacity-60 bg-cream/5 border-cream/15 select-none">
+                <span className="absolute -top-3 left-1/2 -translate-x-1/2 px-5 py-2 rounded-full bg-destructive text-cream text-sm font-black uppercase tracking-wider border border-destructive shadow-lg">
+                  ✕ ESGOTADO
+                </span>
+                <p className="font-stencil text-xs tracking-[0.3em] mb-2 text-cream/60 mt-2">{l.lote}</p>
+                <p className="font-display text-5xl font-black leading-none mb-1 text-cream/40 line-through">{l.preco}</p>
+                <p className="text-sm mb-4 text-cream/60 font-semibold">Vagas esgotadas</p>
+                <ul className="space-y-1.5 text-sm">
+                  {["PIX ou cartão em até 4x sem juros", "Almoço + vinho inclusos", "Grupo exclusivo pós-caçada"].map((f) => (
+                    <li key={f} className="flex gap-2 items-start">
+                      <CheckCircle2 className="w-4 h-4 shrink-0 mt-0.5 text-cream/30" />
+                      <span className="text-cream/50">{f}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </div>
 
-          <div className="max-w-3xl mx-auto mt-6 text-center space-y-3">
-            <p className="text-cream/85 text-sm">
-              🍄 <strong>Casais, duplas e grupos:</strong> descontos especiais 🍄‍🟫
-            </p>
+          <div className="max-w-3xl mx-auto mt-10 text-center space-y-4">
             <div className="flex flex-wrap gap-3 justify-center">
-              <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
+              <Button asChild size="lg" className="bg-cream hover:bg-cream/90 text-forest-deep rounded-none px-10 h-14 text-base font-bold uppercase tracking-wider shadow-glow group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Quero minha vaga · 3º lote R$497
+                  {WAITLIST_LABEL}
                   <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
               <Button asChild size="lg" variant="outline" className="rounded-none px-8 h-14 text-base border-cream/30 text-cream hover:bg-cream hover:text-forest-deep">
                 <a
-                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20descontos%20para%20casais%2C%20duplas%20ou%20grupos%20na%20Ca%C3%A7ada%20de%20Cogumelos."
+                  href="https://wa.me/5541995472974?text=Oi!%20Quero%20saber%20sobre%20a%20pr%C3%B3xima%20edi%C3%A7%C3%A3o%20da%20Ca%C3%A7ada%20de%20Cogumelos."
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  Falar sobre desconto
+                  Falar no WhatsApp
                 </a>
               </Button>
             </div>
           </div>
+
         </div>
       </section>
 
@@ -348,7 +289,7 @@ const Index = () => {
           <div className="text-center mt-12">
             <Button asChild size="lg" className="bg-sienna hover:bg-sienna/90 text-cream rounded-none px-10 h-16 text-base font-bold uppercase tracking-wider shadow-glow group">
               <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                Quero minha vaga · 3º e último lote
+                {WAITLIST_LABEL}
                 <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </a>
             </Button>
@@ -541,16 +482,16 @@ const Index = () => {
           <div className="max-w-4xl mx-auto text-center">
             <Leaf className="w-10 h-10 text-sienna mx-auto mb-8" />
             <h2 className="font-display text-5xl sm:text-7xl font-bold text-forest-deep mb-6 leading-[1.05] text-balance">
-              Vagas limitadas.<br />
-              <em className="text-sienna not-italic">Garanta a sua.</em>
+              Edição esgotada.<br />
+              <em className="text-sienna not-italic">Vem aí 2027.</em>
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl mx-auto mb-12">
-              Reserve já o seu lugar nesta vivência única na Mata Atlântica e deixe-se guiar pela floresta.
+              Entre na lista de espera e seja avisado(a) em primeira mão quando abrirmos as inscrições da próxima edição.
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
               <Button asChild size="lg" className="bg-forest-deep hover:bg-forest-mid text-cream rounded-full px-10 h-14 text-base group">
                 <a href={FORM_URL} target="_blank" rel="noopener noreferrer">
-                  Inscreva-se agora
+                  {WAITLIST_LABEL}
                   <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
                 </a>
               </Button>
